@@ -5,8 +5,8 @@
   "author": "Themefisher",
   "license": "MIT",
   "scripts": {
-    "dev": "gulp",
-    "build": "gulp build"
+    "dev": "npx gulp",
+    "build": " npx gulp build"
   },
   "dependencies": {
     "browser-sync": "^2.27.10",
