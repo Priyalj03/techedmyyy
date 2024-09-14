@@ -27,13 +27,124 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
+<style>
+    .announcement {
+  margin-bottom: 0;
+  background-color: #fff6e5;
+  padding: 5px 10px;
+  position: fixed;  /* Fixes the announcement at the top */
+  top: 0;           /* Make sure it's at the top of the page */
+  width: 100%;
+  z-index: 1100;    /* Ensure it's above other elements */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Ensure the navbar is below the announcement section */
+.navbar {
+  margin-top: -10px;
+  padding-top: 0;
+  position: fixed;  /* Fix the navbar as well */
+  top: 30px;        /* Adjust this value to match the height of the announcement */
+  width: 100%;
+  z-index: 1000;    /* Just below the announcement section */
+  background-color: transparent;  /* Change to 'transparent' to retain the original color */
+  /* Add your original navbar color here if needed, like background-color: #originalColor; */
+}
+
+/* Additional Announcement styling */
+.announcement-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.apply-now {
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.apply-now:hover {
+  background-color: #f79b33;
+}
+
+/* Initial transparent navbar */
+.navbar {
+  position: fixed;
+  top: 50px; /* Adjust as needed */
+  width: 100%;
+  z-index: 9998;
+  background-color: transparent;  /* Starts off transparent */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background-color: black; /* Changes to black on scroll */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+/* Mobile view sliding effect */
+@media (max-width: 768px) {
+  .announcement-text {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      animation: slide 15s linear infinite;
+  }
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+</style>
+<script>
+	window.addEventListener('scroll', function() {
+		var navbar = document.querySelector('.navbar');
+		var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+		if (scrollPosition > 50) { // Adjust this value for when you want the navbar to change color
+			navbar.classList.add('scrolled');
+		} else {
+			navbar.classList.remove('scrolled');
+		}
+	});
+</script>
+
 <body>
+
+<!-- Header Start -->
+<!-- Section Menu Start -->
+<section class="announcement">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<div class="announcement-text">
+					<b>Carrer Development Program - Rapid Application Development Program</b> 
+					<a href="#" class="apply-now">Apply Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 <!-- Header Start -->
 <nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="index.html">
-			<h2 class="text-white text-capitalize"></i>Tech<span class="text-color">Edmy</span></h2>
+			<h3 class="text-white text-capitalize"></i>Tech<span class="text-color">Edmy</span></h3>
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
 			aria-controls="navbarsid" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,17 +152,20 @@
 		</button>
 		<div class="collapse text-center navbar-collapse" id="navbarsid">
 			<ul class="navbar-nav mx-auto">
-				<li class="nav-item active">
+				<!-- <li class="nav-item active">
 					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-				</li>
+				</li> -->
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false">About</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="about.html">About Us</a></li>
+						<li><a class="dropdown-item" href="about.html">About</a></li>
 						<!-- <li><a class="dropdown-item" href="trainer.html">Trainer</a></li> -->
 						<li><a class="dropdown-item" href="course.html">Courses</a></li>
 					</ul>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="course.html">Programs </a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
 				<!-- <li class="nav-item"><a class="nav-link" href="pricing.html">Internships</a></li> -->
@@ -74,6 +188,7 @@
 		</div>
 	</div>
 </nav>
+
 
 
 <!-- Header Close -->
@@ -173,7 +288,7 @@
 </section>
 <!-- Section Course ENd -->
 <!-- Section Services Start -->
-<section class="section services py-3">
+<!-- <section class="section services py-3">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -238,7 +353,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Section Services End -->
 
 
