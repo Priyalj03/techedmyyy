@@ -218,6 +218,41 @@
   padding: 60px 0; /* You can adjust the padding for the section */
 }
 
+/* Card Styling */
+.card {
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+  overflow: hidden; /* To ensure the image and content don't overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+.card img {
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Zoom in on the image when hovering */
+}
+
+.card-body {
+  padding: 20px; /* Add some padding inside the card body */
+  text-align: center; /* Center the text content */
+}
+
+.card-body h4 {
+  font-size: 1.25rem; /* Adjust font size */
+  font-weight: bold; /* Bold title */
+}
+
+.card-body p {
+  color: #666; /* Subtle text color */
+}
+
 
   </style>
 	<script>
