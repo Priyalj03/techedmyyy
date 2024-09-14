@@ -105,3 +105,13 @@
 	});
 
 })(jQuery);
+
+// Optional: You can add this if you want to customize the behavior of sliding text on specific devices
+document.addEventListener('DOMContentLoaded', function () {
+    const announcementText = document.querySelector('.announcement-text');
+
+    if (window.innerWidth < 768) {
+        // Adjust any additional behaviors for mobile here
+        announcementText.style.animationDuration = '15s'; // Control the speed of the sliding text
+    }
+});
