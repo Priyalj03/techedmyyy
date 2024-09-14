@@ -34,142 +34,153 @@
 </head>
 
 <style>
-    /* Announcement Bar */
     .announcement {
-      margin-bottom: 0;
-      background-color: #fff6e5;
-      padding: 4px 6px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1100;
-      border-bottom: 1px solid #ddd;
-    }
+  margin-bottom: 0;
+  background-color: #fff6e5;
+  padding: 5px 10px;
+  position: fixed;  /* Fixes the announcement at the top */
+  top: 0;           /* Make sure it's at the top of the page */
+  width: 100%;
+  z-index: 1100;    /* Ensure it's above other elements */
+  border-bottom: 1px solid #ddd;
+}
 
-    /* Ensure the navbar is below the announcement section */
-    .navbar {
-      margin-top: -10px;
-      padding-top: 0;
-      position: fixed;
-      top: 30px;
-      width: 100%;
-      z-index: 1000;
-      background-color: transparent;
-      transition: background-color 0.3s ease-in-out;
-    }
+/* Ensure the navbar is below the announcement section */
+.navbar {
+  margin-top: -10px;
+  padding-top: 0;
+  position: fixed;  /* Fix the navbar as well */
+  top: 30px;        /* Adjust this value to match the height of the announcement */
+  width: 100%;
+  z-index: 1000;    /* Just below the announcement section */
+  background-color: transparent;  /* Change to 'transparent' to retain the original color */
+  /* Add your original navbar color here if needed, like background-color: #originalColor; */
+}
 
-    /* Additional Announcement styling */
-    .announcement-text {
-      font-size: 16px;
-      font-weight: 500;
-      color: #000;
-    }
+/* Additional Announcement styling */
+.announcement-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
 
-    .apply-now {
-      background-color: #ff8c00;
-      color: #fff;
-      padding: 5px 10px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 12px;
-      font-weight: bold;
-    }
+.apply-now {
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
 
-    .apply-now:hover {
-      background-color: #f79b33;
-    }
+.apply-now:hover {
+  background-color: #f79b33;
+}
 
-    /* Navbar when scrolled */
-    .navbar.scrolled {
-      background-color: black;
-      transition: background-color 0.3s ease;
-    }
+/* Initial transparent navbar */
+.navbar {
+  position: fixed;
+  top: 50px; /* Adjust as needed */
+  width: 100%;
+  z-index: 9998;
+  background-color: transparent;  /* Starts off transparent */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
 
-    /* Mobile view sliding effect */
-    @media (max-width: 768px) {
-      .announcement-text {
-        white-space: nowrap;
-        overflow: hidden;
-        position: relative;
-        display: inline-block;
-        animation: slide 15s linear infinite;
-      }
-    }
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background-color: black; /* Changes to black on scroll */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
 
-    @keyframes slide {
-      0% {
-        transform: translateX(100%);
-      }
 
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-
-    /* Card Styling */
-    .styled-card {
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      display: flex;
-      padding: 20px;
-      max-width: 100%;
-      transition: transform 0.3s ease;
-    }
-
-    .styled-card:hover {
-      transform: scale(1.05);
-    }
-
-    .card-image {
-      flex: 1;
-      max-width: 40%;
+/* Mobile view sliding effect */
+@media (max-width: 768px) {
+  .announcement-text {
+      white-space: nowrap;
       overflow: hidden;
-      border-radius: 20px;
-    }
-
-    .card-image img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .card-content {
-      flex: 2;
-      padding-left: 20px;
-    }
-
-    .card-date {
-      font-size: 14px;
-      color: #888;
-    }
-
-    .card-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    .card-description {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-
-    .btn-gradient {
+      position: relative;
       display: inline-block;
-      padding: 10px 20px;
-      background: linear-gradient(45deg, #ff5722, #ff9800);
-      color: #fff;
-      border-radius: 25px;
-      text-transform: uppercase;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
+      animation: slide 15s linear infinite;
+  }
+}
 
-    .btn-gradient:hover {
-      background: linear-gradient(45deg, #ff9800, #ff5722);
-    }
+@keyframes slide {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+
+/* //////////////////////////// */
+.styled-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  padding: 20px;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.styled-card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  flex: 1;
+  max-width: 40%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.card-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-gradient {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+  color: #fff;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+}
+
   </style>
 	<script>
 		window.addEventListener('scroll', function() {
@@ -344,7 +355,7 @@
                         <img src="images/gallery/RAD Small.png" alt="Rapid Application Development" class="img-fluid rounded">
                     </div>
                     <div class="card-content ml-4">
-                        <p class="card-date">26 December 2019</p>
+                        <!-- <p class="card-date">26 December 2019</p> -->
                         <h3 class="card-title">Rapid Application Development (RAD) Course</h3>
                         <p class="card-description">Join our RAD course to master the techniques for rapid application development. Learn from experts and get hands-on experience with the latest tools and methodologies.</p>
                         <a href="about.html" class="btn btn-gradient">Read More</a>
