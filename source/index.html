@@ -118,6 +118,15 @@
 
 /* //////////////////////////// */
 /* Card Styling */
+/* Banner styling (if not already present) */
+.banner {
+  position: relative;
+  height: 400px; /* Adjust as needed */
+  background: url('path-to-your-banner-image.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Card styling */
 .styled-card {
   background: #fff;
   border-radius: 20px;
@@ -126,7 +135,10 @@
   padding: 20px;
   max-width: 100%;
   transition: transform 0.3s ease;
-  flex-direction: row; /* Default layout: image on the left, text on the right */
+  position: relative;
+  top: -100px; /* Moves the card up over the banner */
+  margin: 0 auto;
+  z-index: 10; /* Ensures the card stays on top of the banner */
 }
 
 .styled-card:hover {
@@ -155,6 +167,7 @@
 @media (max-width: 768px) {
   .styled-card {
     flex-direction: column; /* Stack image and text vertically */
+    top: -50px; /* Adjust for smaller screens */
   }
 
   .card-image {
@@ -277,36 +290,6 @@
 
 
 <!-- Section Menu Start -->
-<!-- Header Start -->
-<!-- <nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="index.html">
-			<h2 class="text-white text-capitalize"></i>Tech<span class="text-color">Edmy</span></h2>
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
-			aria-controls="navbarsid" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="ti-view-list"></span>
-		</button>
-		<div class="collapse text-center navbar-collapse" id="navbarsid">
-			<ul class="navbar-nav mx-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false">About</a>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="about.html">About Us</a></li>
-						<li><a class="dropdown-item" href="course.html">Courses</a></li>
-					</ul>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-				<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-	</div>
-</nav> -->
-
 
 <!-- Header Close -->
 
