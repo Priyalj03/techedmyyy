@@ -117,14 +117,16 @@
 
 
 /* //////////////////////////// */
+/* Card Styling */
 .styled-card {
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   padding: 20px;
   max-width: 100%;
   transition: transform 0.3s ease;
+  flex-direction: row; /* Default layout: image on the left, text on the right */
 }
 
 .styled-card:hover {
@@ -149,10 +151,22 @@
   padding-left: 20px;
 }
 
-.card-date {
-  font-size: 14px;
-  color: #888;
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .styled-card {
+    flex-direction: column; /* Stack image and text vertically */
+  }
+
+  .card-image {
+    max-width: 100%; /* Make image full-width in mobile view */
+    margin-bottom: 20px; /* Add space between image and content */
+  }
+
+  .card-content {
+    padding-left: 0; /* Remove left padding for mobile view */
+  }
 }
+
 
 .card-title {
   font-size: 24px;
@@ -347,23 +361,23 @@
 </section> -->
 
 <section class="mt-80px"></section>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="styled-card d-flex align-items-center p-4 shadow">
-                    <div class="card-image">
-                        <img src="images/gallery/RAD Small.png" alt="Rapid Application Development" class="img-fluid rounded">
-                    </div>
-                    <div class="card-content ml-4">
-                        <!-- <p class="card-date">26 December 2019</p> -->
-                        <h3 class="card-title">Rapid Application Development (RAD) Course</h3>
-                        <p class="card-description">Join our RAD course to master the techniques for rapid application development. Learn from experts and get hands-on experience with the latest tools and methodologies.</p>
-                        <a href="about.html" class="btn btn-gradient">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+	<div class="row justify-content-center">
+	  <div class="col-lg-10">
+		<div class="styled-card d-flex align-items-center p-4 shadow">
+		  <div class="card-image">
+			<img src="images/gallery/RAD Small.png" alt="Rapid Application Development" class="img-fluid rounded">
+		  </div>
+		  <div class="card-content ml-4">
+			<p class="card-date">26 December 2019</p>
+			<h3 class="card-title">Rapid Application Development (RAD) Course</h3>
+			<p class="card-description">Join our RAD course to master rapid application development techniques. Learn from experts and gain hands-on experience.</p>
+			<a href="about.html" class="btn btn-gradient">Read More</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>  
 </section>
 
 <!-- Section Intro End -->
