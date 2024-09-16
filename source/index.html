@@ -424,6 +424,7 @@
 <!-- Section Services Start -->
 <!-- Section Services Start -->
 <!-- HTML -->
+<!-- HTML -->
 <section class="section services">
 	<div class="container">
 		<div class="row justify-content-center">
@@ -436,44 +437,44 @@
 			</div>
 		</div>
 
-		<div class="row no-gutters">
-			<div class="col-lg-4 col-md-6 col-sm-6">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-4">
 				<div class="services-card text-center px-4 py-4">
 					<i class="icofont-teacher text-lg text-color"></i>
 					<h4 class="mt-3 mb-4 text-uppercase">Industry Expert Mentorship</h4>
 					<p>Learn from industry professionals with real-world expertise.</p>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="services-card alt-card text-center px-4 py-5">
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+				<div class="services-card alt-card text-center px-4 py-4">
 					<i class="icofont-book text-lg text-color"></i>
 					<h4 class="mt-3 mb-4 text-uppercase">Comprehensive Curriculum</h4>
 					<p>Our curriculum spans across high-demand fields like Cloud, Data Science, DevOps, AI/ML, MERN and more.</p>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="services-card text-center px-4 py-5">
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+				<div class="services-card text-center px-4 py-4">
 					<i class="icofont-bag-alt text-lg text-color"></i>
 					<h4 class="mt-3 mb-4 text-uppercase">Guaranteed Job Placement</h4>
 					<p>Secure your career with guaranteed placement in top tech fields.</p>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="services-card alt-card text-center px-4 py-5">
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+				<div class="services-card alt-card text-center px-4 py-4">
 					<i class="icofont-certificate-alt-2 text-lg text-color"></i>
 					<h4 class="mt-3 mb-4 text-uppercase">Paid Internship Opportunities</h4>
 					<p>Gain practical experience with fully paid internships.</p>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="services-card text-center px-4 py-5">
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+				<div class="services-card text-center px-4 py-4">
 					<i class="icofont-building-alt text-lg text-color"></i>
 					<h4 class="mt-3 mb-4 text-uppercase">Innovative Training Environment</h4>
 					<p>Experience professional training setups with high-tech digital labs and smart classrooms designed to mirror real office environments.</p>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="services-card alt-card text-center px-4 py-5">
+			<div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+				<div class="services-card alt-card text-center px-4 py-4">
 					<i class="icofont-hat-alt text-lg text-color"></i>
 					<h4 class="mt-3 mb-4 text-uppercase">Tailored Learning Programs</h4>
 					<p>Choose from degree courses, job training, or short-term certifications.</p>
@@ -491,6 +492,7 @@
 		border-radius: 10px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		padding: 20px;
 	}
 
 	/* Alternate card background */
@@ -535,7 +537,20 @@
 		background-color: #ee5c1d;
 		margin: 0 auto;
 	}
+
+	/* Add margins between cards */
+	.services .row > [class*='col-'] {
+		margin-bottom: 30px;
+	}
+
+	/* Reduce padding for smaller screens */
+	@media (max-width: 768px) {
+		.services .services-card {
+			padding: 15px;
+		}
+	}
 </style>
+
 
 <!-- Section Services End -->
 
