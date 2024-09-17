@@ -27,13 +27,124 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
+<style>
+    .announcement {
+  margin-bottom: 0;
+  background-color: #fff6e5;
+  padding: 5px 10px;
+  position: fixed;  /* Fixes the announcement at the top */
+  top: 0;           /* Make sure it's at the top of the page */
+  width: 100%;
+  z-index: 1100;    /* Ensure it's above other elements */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Ensure the navbar is below the announcement section */
+.navbar {
+  margin-top: -10px;
+  padding-top: 0;
+  position: fixed;  /* Fix the navbar as well */
+  top: 30px;        /* Adjust this value to match the height of the announcement */
+  width: 100%;
+  z-index: 1000;    /* Just below the announcement section */
+  background-color: transparent;  /* Change to 'transparent' to retain the original color */
+  /* Add your original navbar color here if needed, like background-color: #originalColor; */
+}
+
+/* Additional Announcement styling */
+.announcement-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.apply-now {
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.apply-now:hover {
+  background-color: #f79b33;
+}
+
+/* Initial transparent navbar */
+.navbar {
+  position: fixed;
+  top: 50px; /* Adjust as needed */
+  width: 100%;
+  z-index: 9998;
+  background-color: transparent;  /* Starts off transparent */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background-color: black; /* Changes to black on scroll */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+/* Mobile view sliding effect */
+@media (max-width: 768px) {
+  .announcement-text {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      animation: slide 15s linear infinite;
+  }
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+</style>
+<script>
+	window.addEventListener('scroll', function() {
+		var navbar = document.querySelector('.navbar');
+		var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+		if (scrollPosition > 50) { // Adjust this value for when you want the navbar to change color
+			navbar.classList.add('scrolled');
+		} else {
+			navbar.classList.remove('scrolled');
+		}
+	});
+</script>
+
 <body>
+
+<!-- Header Start -->
+<!-- Section Menu Start -->
+<section class="announcement">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<div class="announcement-text">
+					<b>Carrer Development Program - Rapid Application Development Program</b> 
+					<a href="#" class="apply-now">Apply Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 <!-- Header Start -->
 <nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="index.html">
-			<h2 class="text-white text-capitalize"></i>Tech<span class="text-color">Edmy</span></h2>
+			<h3 class="text-white text-capitalize"></i>Tech<span class="text-color">Edmy</span></h3>
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
 			aria-controls="navbarsid" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,17 +152,14 @@
 		</button>
 		<div class="collapse text-center navbar-collapse" id="navbarsid">
 			<ul class="navbar-nav mx-auto">
-				<li class="nav-item active">
+				<!-- <li class="nav-item active">
 					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				</li> -->
+				<li class="nav-item active">
+					<a class="nav-link" href="about.html">About </a>
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false">About</a>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="about.html">About</a></li>
-						<!-- <li><a class="dropdown-item" href="trainer.html">Trainer</a></li> -->
-						<li><a class="dropdown-item" href="course.html">Courses</a></li>
-					</ul>
+				<li class="nav-item active">
+					<a class="nav-link" href="course.html">Programs </a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
 				<!-- <li class="nav-item"><a class="nav-link" href="pricing.html">Internships</a></li> -->
@@ -101,7 +209,6 @@
 			<div class="col-lg-9 col-md-12">
 				<div class="single-course">
 					<img src="images/gallery/RAD Big.png" alt="" class="img-fluid">
-
 					<ul class="list-group list-group-horizontal-sm mt-5 mb-4">
 					  <li class="list-group-item "><span class="text-lg text-color"><b>6</b></span> <b>Months</b></li>
 					  <li class="list-group-item"><span class="text-lg text-color"><b>5+</b></span> <b>Design Tools</b></li>
@@ -162,11 +269,11 @@
 				<div class= "course-widget py-4 px-2 mt-3">
 					<h3 class="text-center mb-3">Trending OJT Programs</h3>
 					<ul class="list-group list-group-flush">
-					  <li class="list-group-item"><a href="#"><i class="ti-angle-right mr-2" ></i><b>MERN Stack</b></a> </li>
-					  <li class="list-group-item"><a href="#"> <i class="ti-angle-right mr-2"></i><b>MEAN Stack</b></a></li>
-					  <li class="list-group-item"><a href="#"> <i class="ti-angle-right mr-2"></i><b> . Net</b></a></li>
-					  <li class="list-group-item"><a href="#"> <i class="ti-angle-right mr-2"></i><b>RAD</b></a></li>
-					  <li class="list-group-item"><a href="#"> <i class="ti-angle-right mr-2"></i><b>AI/ML</b></a></li>
+					  <li class="list-group-item"><a href="uxdesign.html"><i class="ti-angle-right mr-2" ></i><b>UI/UX Designing</b></a> </li>
+					  <li class="list-group-item"><a href="mern.html"> <i class="ti-angle-right mr-2"></i><b>MERN Stack</b></a></li>
+					  <li class="list-group-item"><a href="net.html"> <i class="ti-angle-right mr-2"></i><b> . Net</b></a></li>
+					  <li class="list-group-item"><a href="rad.html"> <i class="ti-angle-right mr-2"></i><b>RAD</b></a></li>
+					  <li class="list-group-item"><a href="AI_ML.html"> <i class="ti-angle-right mr-2"></i><b>AI/ML</b></a></li>
 					</ul>
 				</div>
 			</div>
@@ -175,7 +282,7 @@
 </section>
 <!-- Section Course ENd -->
 <!-- Section Services Start -->
-<section class="section services py-3">
+<!-- <section class="section services py-3">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -248,7 +355,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Section Services End -->
 
 
@@ -267,12 +374,12 @@
 				<div class="footer-widget recent-blog">
 					<h4 class="mb-4 text-white letter-spacing text-uppercase">Most Popular Courses</h4>
 					<div>
-						<a href="blog-single.html"class="text-white">UX Design Excellence Program</a>
-						<p class="text-sm mt-2 text-white-50">22 June 2024</p>
+						<a href="blog-single.html"class="text-white">AI/ML</a>
+						<!-- <p class="text-sm mt-2 text-white-50">22 June 2024</p> -->
 					</div>
 					<div class="mt-4">
-						<a href="blog-single.html"class="text-white">MERN Stack Pro Certification</a>
-						<p class="text-sm mt-2 text-white-50">03 August 2024</p>
+						<a href="blog-single.html"class="text-white">Fullstack Development</a>
+						<!-- <p class="text-sm mt-2 text-white-50">03 August 2024</p> -->
 					</div>
 
 				</div>
@@ -283,7 +390,7 @@
 					<ul class="list-unstyled footer-menu lh-40 mb-0">
 						<li><a href="about.html"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
 						<li><a href="service.html"><i class="ti-angle-double-right mr-2"></i>Services</a></li>
-						<li><a href="pricing.html"><i class="ti-angle-double-right mr-2"></i>Membership</a></li>
+						<!-- <li><a href="pricing.html"><i class="ti-angle-double-right mr-2"></i>Membership</a></li> -->
 						<li><a href="course.html"><i class="ti-angle-double-right mr-2"></i>Courses</a></li>
 						<li><a href="contact.html"><i class="ti-angle-double-right mr-2"></i>Contact us</a></li>
 					</ul>
@@ -306,13 +413,13 @@
 			</div>
 			<div class="col-lg-6 ml-auto text-right">
 				<ul class="list-inline mb-0 footer-socials">
-					<li class="list-inline-item"><a href="https://www.facebook.com/techedmy"><i class="ti-facebook"></i></a></li>
-					<li class="list-inline-item"><a href="https://twitter.com/techedmy"><i class="ti-twitter"></i></a></li>
-					<li class="list-inline-item"><a href="https://github.com/techedmy/"><i class="ti-reddit"></i></a></li>
-					<li class="list-inline-item"><a href="https://instagram.com/techedmy/"><i class="ti-instagram"></i></a></li>
-					<li class="list-inline-item"><a href="https://linkedin.com/techedmy/"><i class="ti-linkedin"></i></a></li>
-					<li class="list-inline-item"><a href="https://youtube.com/techedmy/"><i class="ti-youtube"></i></a></li>
-					<li class="list-inline-item"><a href="https://whatsapp.com/techedmy/"><i class="ti-whatsapp"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-facebook"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-twitter"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-reddit"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-instagram"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-linkedin"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-youtube"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-whatsapp"></i></a></li>
 				</ul>
 			</div>
 		</div>

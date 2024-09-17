@@ -1,13 +1,14 @@
 <!doctype html>
 
+
 <html lang="en">
   <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="GYm,fitness,business,company,agency,multipurpose,modern,bootstrap4">
   
-  <meta name="author" content="">
+  <meta name="author" content="Themefisher.com">
 
   <title>Techedmy</title>
 
@@ -28,13 +29,157 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
+<style>
+	.card {
+	  border-radius: 15px; /* Rounded borders */
+	  overflow: hidden; /* Ensure the rounded corners apply to the image and content */
+	  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+	}
+  
+	.card img {
+	  border-radius: 15px 15px 0 0; /* Rounded corners for the top image */
+	  width: 100%;
+	  height: auto;
+	}
+  
+	.card-body {
+	  padding: 15px;
+	}
+  
+	.card:hover {
+	  transform: scale(1.05); /* Zoom-in effect on hover */
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+	}
+  
+	.card-body h4 {
+	  margin-top: 1rem;
+	  margin-bottom: 0;
+	}
+  
+	.card-body p {
+	  margin-bottom: 0.5rem;
+	}
+  
+	.list-inline-item {
+	  margin-right: 0.5rem;
+	}
+    .announcement {
+  margin-bottom: 0;
+  background-color: #fff6e5;
+  padding: 5px 10px;
+  position: fixed;  /* Fixes the announcement at the top */
+  top: 0;           /* Make sure it's at the top of the page */
+  width: 100%;
+  z-index: 1100;    /* Ensure it's above other elements */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Ensure the navbar is below the announcement section */
+.navbar {
+  margin-top: -10px;
+  padding-top: 0;
+  position: fixed;  /* Fix the navbar as well */
+  top: 30px;        /* Adjust this value to match the height of the announcement */
+  width: 100%;
+  z-index: 1000;    /* Just below the announcement section */
+  background-color: transparent;  /* Change to 'transparent' to retain the original color */
+  /* Add your original navbar color here if needed, like background-color: #originalColor; */
+}
+
+/* Additional Announcement styling */
+.announcement-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.apply-now {
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.apply-now:hover {
+  background-color: #f79b33;
+}
+
+/* Initial transparent navbar */
+.navbar {
+  position: fixed;
+  top: 50px; /* Adjust as needed */
+  width: 100%;
+  z-index: 9998;
+  background-color: transparent;  /* Starts off transparent */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background-color: black; /* Changes to black on scroll */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+/* Mobile view sliding effect */
+@media (max-width: 768px) {
+  .announcement-text {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      animation: slide 15s linear infinite;
+  }
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+</style>
+<script>
+	window.addEventListener('scroll', function() {
+		var navbar = document.querySelector('.navbar');
+		var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+		if (scrollPosition > 50) { // Adjust this value for when you want the navbar to change color
+			navbar.classList.add('scrolled');
+		} else {
+			navbar.classList.remove('scrolled');
+		}
+	});
+</script>
+
 <body>
+
+<!-- Header Start -->
+<!-- Section Menu Start -->
+<section class="announcement">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<div class="announcement-text">
+					<b>Carrer Development Program - Rapid Application Development Program</b> 
+					<a href="#" class="apply-now">Apply Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 <!-- Header Start -->
 <nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="index.html">
-			<h2 class="text-white text-capitalize"></i>Tech<span class="text-color">Edmy</span></h2>
+			<h3 class="text-white text-capitalize"></i>Tech<span class="text-color">Edmy</span></h3>
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
 			aria-controls="navbarsid" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,17 +187,14 @@
 		</button>
 		<div class="collapse text-center navbar-collapse" id="navbarsid">
 			<ul class="navbar-nav mx-auto">
-				<li class="nav-item active">
+				<!-- <li class="nav-item active">
 					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				</li> -->
+				<li class="nav-item active">
+					<a class="nav-link" href="about.html">About </a>
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false">About</a>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="about.html">About</a></li>
-						<!-- <li><a class="dropdown-item" href="trainer.html">Trainer</a></li> -->
-						<li><a class="dropdown-item" href="course.html">Courses</a></li>
-					</ul>
+				<li class="nav-item active">
+					<a class="nav-link" href="course.html">Programs </a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
 				<!-- <li class="nav-item"><a class="nav-link" href="pricing.html">Internships</a></li> -->
@@ -77,10 +219,11 @@
 </nav>
 
 
+
 <!-- Header Close -->
 
 <div class="main-wrapper ">
-<section class="page-title bg-2">
+<section class="page-title bg-2" style="background-image: url('images/bg/images.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 400px;">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -89,7 +232,7 @@
             <li class="list-inline-item"><span class="text-white">|</span></li>
             <li class="list-inline-item"><a href="#" class="text-color text-uppercase text-sm letter-spacing">Course</a></li>
           </ul>
-           <h1 class="text-lg text-white mt-2">Best Programs</h1>
+           <h1 class="text-lg text-white mt-2">Best Courses</h1>
       </div>
     </div>
   </div>
@@ -106,14 +249,70 @@
 				</div>
 			</div>
 		</div>
-
+        
 		<div class="row">
+		<div class="col-lg-4 col-md-6">
+			<div class="card rounded-3 p-0 mb-5">
+				<a href="rad.html"><img src="images/gallery/radd.jpg" alt="RAD Program" class="img-fluid"></a>
+				<div class="card-body">
+					<a href="rad.html"><h4 class="mt-3 mb-0">RAD Program</h4></a>
+					<p class="mb-2">Build applications easily using low-code &amp; no-code platforms with minimal programming.</p>
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<i class="ti-time mr-2 text-color"></i>Duration :
+						</li>
+						<li class="list-inline-item text-black">
+							<strong>6 months</strong>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+        <div class="col-lg-4 col-md-6">
+			<div class="card rounded-3 p-0 mb-5">
+				<a href="bi.html"><img src="images/gallery/bi.jpg" alt="Business Intelligence Program" class="img-fluid"></a>
+				<div class="card-body">
+					<a href="bi.html"><h4 class="mt-3 mb-0">Business Intelligence Program</h4></a>
+					<p class="mb-2">Learn Business Intelligence techniques to convert data into valuable insights and strategies.</p>
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<i class="ti-time mr-2 text-color"></i>Duration :
+						</li>
+						<li class="list-inline-item text-black">
+							<strong>6 months</strong>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-4 col-md-6">
+			<div class="card rounded-3 p-0 mb-5">
+				<a href="net.html"><img src="images/gallery/net.jpg" alt=".NET Program" class="img-fluid"></a>
+				<div class="card-body">
+					<a href="net.html"><h4 class="mt-3 mb-0">.NET Program</h4></a>
+					<p class="mb-2">Master .NET framework to create scalable and high-performance software applications.</p>
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<i class="ti-time mr-2 text-color"></i>Duration :
+						</li>
+						<li class="list-inline-item text-black">
+							<strong>6 months</strong>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+       <div class="row">
 			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 mb-5">
+				<div class="card rounded-3 p-0 mb-5">
 					<a href="AI_ML.html"><img src="images/gallery/ai.jpg" alt="AI/ML Program" class="img-fluid"></a>
 					<div class="card-body">
 						<a href="AI_ML.html"><h4 class="mt-3 mb-0">AI/ML Program</h4></a>
-						<p class="mb-2">Learn AI/ML to drive innovation &amp; solve real-world problems.</p>
+						<p class="mb-2">Learn AI/ML technologies to drive innovation &amp; solve real-world problems.</p>
 						<ul class="list-inline">
 							<li class="list-inline-item">
 								<i class="ti-time mr-2 text-color"></i>Duration :
@@ -127,25 +326,7 @@
 			</div>
 
 			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 mb-5">
-					<a href="liferay.html"><img src="images/gallery/liferay.jpg" alt="Liferay Program" class="img-fluid"></a>
-					<div class="card-body">
-						<a href="liferay.html"><h4 class="mt-3 mb-0">Liferay Program</h4></a>
-						<p class="mb-2">Master Liferay to build robust enterprise portals &amp; digital experiences.</p>
-						<ul class="list-inline">
-							<li class="list-inline-item">
-								<i class="ti-time mr-2 text-color"></i>Duration :
-							</li>
-							<li class="list-inline-item text-black">
-								<strong>6 months</strong>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 mb-5">
+				<div class="card rounded-3 p-0 mb-5">
 					<a href="uxdesign.html"><img src="images/gallery/UI-UX.png" alt="UI/UX Program" class="img-fluid"></a>
 					<div class="card-body">
 						<a href="uxdesign.html"><h4 class="mt-3 mb-0">UI/UX Program</h4></a>
@@ -163,7 +344,98 @@
 			</div>
 
 			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 mb-5">
+				<div class="card rounded-3 p-0 mb-5">
+					<a href="java.html"><img src="images/gallery/java.jpg" alt="Java Program" class="img-fluid"></a>
+					<div class="card-body">
+						<a href="java.html"><h4 class="mt-3 mb-0">Java Program</h4></a>
+						<p class="mb-2">Master Java programming language to build robust and scalable applications .</p>
+						<ul class="list-inline">
+							<li class="list-inline-item">
+								<i class="ti-time mr-2 text-color"></i>Duration :
+							</li>
+							<li class="list-inline-item text-black">
+								<strong>6 months</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="col-lg-4 col-md-6">
+				<div class="card rounded-3 p-0 mb-5">
+					<a href="net.html"><img src="images/gallery/net.jpg" alt=".NET Program" class="img-fluid"></a>
+					<div class="card-body">
+						<a href="net.html"><h4 class="mt-3 mb-0">.NET Program</h4></a>
+						<p class="mb-2">Master .NET to develop scalable and high-performance applications.</p>
+						<ul class="list-inline">
+							<li class="list-inline-item">
+								<i class="ti-time mr-2 text-color"></i>Duration :
+							</li>
+							<li class="list-inline-item text-black">
+								<strong>6 months</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div> -->
+
+		<!-- <div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="card rounded-3 p-0 mb-5">
+					<a href="AI_ML.html"><img src="images/gallery/ai.jpg" alt="AI/ML Program" class="img-fluid"></a>
+					<div class="card-body">
+						<a href="AI_ML.html"><h4 class="mt-3 mb-0">AI/ML Program</h4></a>
+						<p class="mb-2">Learn AI/ML technologies to drive innovation &amp; solve real-world problems.</p>
+						<ul class="list-inline">
+							<li class="list-inline-item">
+								<i class="ti-time mr-2 text-color"></i>Duration :
+							</li>
+							<li class="list-inline-item text-black">
+								<strong>6 months</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div> -->
+
+			<!-- <div class="col-lg-4 col-md-6">
+				<div class="card rounded-3 p-0 mb-5">
+					<a href="liferay.html"><img src="images/gallery/liferay.jpg" alt="Liferay Program" class="img-fluid"></a>
+					<div class="card-body">
+						<a href="liferay.html"><h4 class="mt-3 mb-0">Liferay Program</h4></a>
+						<p class="mb-2">Master Liferay to build robust enterprise portals &amp; digital experiences.</p>
+						<ul class="list-inline">
+							<li class="list-inline-item">
+								<i class="ti-time mr-2 text-color"></i>Duration :
+							</li>
+							<li class="list-inline-item text-black">
+								<strong>6 months</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div> -->
+
+			<!-- <div class="col-lg-4 col-md-6">
+				<div class="card rounded-3 p-0 mb-5">
+					<a href="uxdesign.html"><img src="images/gallery/UI-UX.png" alt="UI/UX Program" class="img-fluid"></a>
+					<div class="card-body">
+						<a href="uxdesign.html"><h4 class="mt-3 mb-0">UI/UX Program</h4></a>
+						<p class="mb-2">Design intuitive and engaging interfaces with expert UI/UX principles.</p>
+						<ul class="list-inline">
+							<li class="list-inline-item">
+								<i class="ti-time mr-2 text-color"></i>Duration :
+							</li>
+							<li class="list-inline-item text-black">
+								<strong>6 months</strong>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div> -->
+
+			<!-- <div class="col-lg-4 col-md-6">
+				<div class="card rounded-3 p-0 mb-5">
 					<a href="rad.html"><img src="images/gallery/radd.jpg" alt="RAD Program" class="img-fluid"></a>
 					<div class="card-body">
 						<a href="rad.html"><h4 class="mt-3 mb-0">RAD Program</h4></a>
@@ -178,10 +450,10 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 mb-5">
+			<!-- <div class="col-lg-4 col-md-6">
+				<div class="card rounded-3 p-0 mb-5">
 					<a href="lowcode.html"><img src="images/gallery/lc.jpg" alt="No Code/Low Code Program" class="img-fluid"></a>
 					<div class="card-body">
 						<a href="lowcode.html"><h4 class="mt-3 mb-0">No code/Low code Program</h4></a>
@@ -196,14 +468,14 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 mb-5">
+			<!-- <div class="col-lg-4 col-md-6">
+				<div class="card rounded-3 p-0 mb-5">
 					<a href="java.html"><img src="images/gallery/java.jpg" alt="Java Program" class="img-fluid"></a>
 					<div class="card-body">
 						<a href="java.html"><h4 class="mt-3 mb-0">Java Program</h4></a>
-						<p class="mb-2">Master Java programming to build robust, scalable applications.</p>
+						<p class="mb-2">Master Java programming language to build robust and scalable applications .</p>
 						<ul class="list-inline">
 							<li class="list-inline-item">
 								<i class="ti-time mr-2 text-color"></i>Duration :
@@ -214,14 +486,14 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 mb-5">
+			<!-- <div class="col-lg-4 col-md-6">
+				<div class="card rounded-3 p-0 mb-5">
 					<a href="net.html"><img src="images/gallery/net.jpg" alt=".NET Program" class="img-fluid"></a>
 					<div class="card-body">
 						<a href="net.html"><h4 class="mt-3 mb-0">.NET Program</h4></a>
-						<p class="mb-2">Master .NET framework to develop scalable, high-performance applications.</p>
+						<p class="mb-2">Master .NET to develop scalable and high-performance applications.</p>
 						<ul class="list-inline">
 							<li class="list-inline-item">
 								<i class="ti-time mr-2 text-color"></i>Duration :
@@ -232,10 +504,10 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="col-lg-4 col-md-6">
-				<div class="card rounded-0 p-0 mb-5">
+			<!-- <div class="col-lg-4 col-md-6">
+				<div class="card rounded-3 p-0 mb-5">
 					<a href="bi.html"><img src="images/gallery/bi.jpg" alt="Business Intelligence Program" class="img-fluid"></a>
 					<div class="card-body">
 						<a href="bi.html"><h4 class="mt-3 mb-0">Business Intelligence Program</h4></a>
@@ -250,14 +522,14 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="col-lg-4 col-md-6 mb-5 mt-5">
-				<div class="card rounded-0 p-0">
-					<a href="mern.html"><img src="images/gallery/full.jpg" alt="MERN Program" class="img-fluid"></a>
+			<!-- <div class="col-lg-4 col-md-6">
+				<div class="card rounded-3 p-0 mb-5">
+					<a href="bi.html"><img src="images/gallery/bi.jpg" alt="Business Intelligence Program" class="img-fluid"></a>
 					<div class="card-body">
 						<a href="mern.html"><h4 class="mt-3 mb-0">MERN Program</h4></a>
-						<p class="mb-2">Becoming proficient in both frontend and backend development.</p>
+						<p class="mb-2">Learn to become proficient in both the frontend and backend development.</p>
 						<ul class="list-inline">
 							<li class="list-inline-item">
 								<i class="ti-time mr-2 text-color"></i>Duration :
@@ -268,16 +540,16 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>
 
 
+
 <!-- Section Course ENd -->
 
 <!-- footer Start -->
-
 <footer class="footer bg-black-50">
 	<div class="container">
 		<div class="row">
@@ -286,20 +558,17 @@
 				<p>Elevate your tech career with TECHEDMY's  expert mentorship and real-world training.</p>
 				<p>Experience hands-on learning and industry mentorship that prepares you for success.</p>
 			</div>
-			
-
 			<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
 				<div class="footer-widget recent-blog">
 					<h4 class="mb-4 text-white letter-spacing text-uppercase">Most Popular Courses</h4>
 					<div>
-						<a href="blog-single.html"class="text-white">UX Design Excellence Program</a>
-						<p class="text-sm mt-2 text-white-50">22 June 2024</p>
+						<a href=""class="text-white">AI/ML</a>
+						<!-- <p class="text-sm mt-2 text-white-50">22 June 2024</p> -->
 					</div>
 					<div class="mt-4">
-						<a href="blog-single.html"class="text-white">MERN Stack Pro Certification</a>
-						<p class="text-sm mt-2 text-white-50">03 August 2024</p>
+						<a href="mern.html"class="text-white">Fullstack Development</a>
+						<!-- <p class="text-sm mt-2 text-white-50">03 August 2024</p> -->
 					</div>
-
 				</div>
 			</div>
 			<div class="col-lg-2 col-md-5 mb-5 mb-lg-0">
@@ -308,7 +577,7 @@
 					<ul class="list-unstyled footer-menu lh-40 mb-0">
 						<li><a href="about.html"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
 						<li><a href="service.html"><i class="ti-angle-double-right mr-2"></i>Services</a></li>
-						<li><a href="pricing.html"><i class="ti-angle-double-right mr-2"></i>Membership</a></li>
+						<!-- <li><a href="pricing.html"><i class="ti-angle-double-right mr-2"></i>Membership</a></li> -->
 						<li><a href="course.html"><i class="ti-angle-double-right mr-2"></i>Courses</a></li>
 						<li><a href="contact.html"><i class="ti-angle-double-right mr-2"></i>Contact us</a></li>
 					</ul>
@@ -317,8 +586,8 @@
 			<div class="col-lg-3 col-md-5">
 				<div class="footer-widget">
 					<h4 class="mb-4 text-white letter-spacing text-uppercase">Headquarters</h4>
-					<p>Washington 6036 Richmond
-					hwy., Alexandria, VA USA 22303 </p>
+					<!-- <p>Washington 6036 Richmond
+					hwy., Alexandria, VA USA 22303 </p> -->
 					<span class="text-white">+91 7742913163, 9982688844</span>
 					<span class="text-white">techedmy@gmail.com</span>
 				</div>
@@ -331,13 +600,13 @@
 			</div>
 			<div class="col-lg-6 ml-auto text-right">
 				<ul class="list-inline mb-0 footer-socials">
-					<li class="list-inline-item"><a href="https://www.facebook.com/techedmy"><i class="ti-facebook"></i></a></li>
-					<li class="list-inline-item"><a href="https://twitter.com/techedmy"><i class="ti-twitter"></i></a></li>
-					<li class="list-inline-item"><a href="https://github.com/techedmy/"><i class="ti-reddit"></i></a></li>
-					<li class="list-inline-item"><a href="https://instagram.com/techedmy/"><i class="ti-instagram"></i></a></li>
-					<li class="list-inline-item"><a href="https://linkedin.com/techedmy/"><i class="ti-linkedin"></i></a></li>
-					<li class="list-inline-item"><a href="https://youtube.com/techedmy/"><i class="ti-youtube"></i></a></li>
-					<li class="list-inline-item"><a href="https://whatsapp.com/techedmy/"><i class="ti-whatsapp"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-facebook"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-twitter"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-reddit"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-instagram"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-linkedin"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-youtube"></i></a></li>
+					<li class="list-inline-item"><a href=""><i class="ti-whatsapp"></i></a></li>
 				</ul>
 			</div>
 		</div>
