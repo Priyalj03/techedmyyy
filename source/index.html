@@ -345,7 +345,46 @@
 				<span class="h6 d-inline-block mb-4 subhead text-uppercase">Your Gateway to Industry-Ready Skills</span>
 				<h1 class="text-uppercase text-white mb-5">Step up your <span class="text-color">Career in Tech</span><br>with </i>Tech<span class="text-color">edmy</span></h1>
 			
-				<a href="join.html" target="_blank" class="btn btn-main " >Join Us <i class="ti-angle-right ml-3"></i></a>
+                <button type="button" class="btn btn-main " data-bs-toggle="modal" data-bs-target="#registrationModal">
+					Join Now<i class="ti-angle-right ml-3"></i>
+				</button>
+			
+				<!-- Modal for Registration Form -->
+				<div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="registrationModalLabel">Student Registration Form</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="row">
+										<div class="col-md-6 mb-4">
+											<div class="form-outline">
+												<input type="text" id="form3Example1m" class="form-control form-control-lg" required/>
+												<label class="form-label" for="form3Example1m">First name</label>
+											</div>
+										</div>
+										<div class="col-md-6 mb-4">
+											<div class="form-outline">
+												<input type="text" id="form3Example1n" class="form-control form-control-lg" required/>
+												<label class="form-label" for="form3Example1n">Last name</label>
+											</div>
+										</div>
+									</div>
+			
+									<!-- Other form fields... -->
+			
+									<div class="d-flex justify-content-end pt-3">
+										<button type="reset" class="btn btn-light btn-lg">Reset all</button>
+										<button type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>			
 			</div>
 		</div>
 	</div>
@@ -790,6 +829,7 @@
    <script src="plugins/google-map/gmap.js"></script>
 
    <script src="js/script.js"></script>
+   <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
    </body>
 
