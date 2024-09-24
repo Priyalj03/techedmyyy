@@ -23,6 +23,12 @@
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Load jQuery (ensure it's from a trusted CDN) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Load jQuery Form Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.min.js"></script>
+
 </head>
 <style>
   /* Your existing CSS styles here */
@@ -334,35 +340,24 @@
   <!-- AJAX Form Submission Script -->
   <script>
     $(document).ready(function() {
-      $('#contact-form').on('submit', function(e) {
-        e.preventDefault(); // Prevent the default form submission
-
-        // Clear previous messages
-        $('#error').hide();
-        $('#success').hide();
-
-        // Serialize the form data
-        var formData = $(this).serialize();
-
-        // Send the form data via AJAX
-        $.ajax({
-          type: 'POST',
-          url: 'submit_contact.php', // Ensure this path is correct
-          data: formData,
-          success: function(response) {
-            if (response.trim() === 'sent') {
-              $('#success').show();
-              $('#contact-form')[0].reset(); // Reset the form
-            } else {
-              $('#error').text(response).show();
-            }
-          },
-          error: function() {
-            $('#error').text('An unexpected error occurred. Please try again later.').show();
-          }
+        $('#contactForm').submit(function(e) {
+            e.preventDefault(); // Prevent the default form submission
+    
+            $.ajax({
+                url: 'your-backend-url-here', // The backend endpoint for handling the form data
+                type: 'POST',
+                data: $(this).serialize(), // Send form data
+                success: function(response) {
+                    // Handle success response
+                    alert('Message sent successfully!');
+                },
+                error: function(xhr, status, error) {
+                    // Handle error response
+                    alert('An error occurred. Please try again.');
+                }
+            });
         });
-      });
     });
-  </script>
+    </script>    
 </body>
 </html>
