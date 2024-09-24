@@ -950,3 +950,16 @@ ul.dropdown-menu li {
 .btn-gradient:hover {
   background: linear-gradient(45deg, #ff9800, #ff5722);
 }
+
+/* 
+form */
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+  }
+  .card-registration .select-arrow {
+  top: 13px;
+  }
