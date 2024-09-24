@@ -24,10 +24,7 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   <!-- Load jQuery (ensure it's from a trusted CDN) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- Load jQuery Form Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <style>
@@ -182,7 +179,7 @@
       <div class="container">
         <div class="row justify-content-center pb-5">
           <div class="col-lg-9">
-            <form id="contact-form" action="sendmail.php" method="POST">
+            <form id="contact-form" action="api/sendmail.js" method="POST">
               <div class="form-row">
 
                 <!-- Left Column: Name, Email, Contact -->
@@ -338,26 +335,38 @@
   <script src="plugins/google-map/gmap.js"></script>
 
   <!-- AJAX Form Submission Script -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+  <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+  <script src="plugins/waypoint/jquery.waypoints.min.js"></script>
+  <script src="plugins/counterup/jquery.counterup.min.js"></script>
+  <script src="js/theme.js"></script>
+
+  <!-- AJAX form submission -->
   <script>
     $(document).ready(function() {
-        $('#contactForm').submit(function(e) {
-            e.preventDefault(); // Prevent the default form submission
-    
-            $.ajax({
-                url: 'your-backend-url-here', // The backend endpoint for handling the form data
-                type: 'POST',
-                data: $(this).serialize(), // Send form data
-                success: function(response) {
-                    // Handle success response
-                    alert('Message sent successfully!');
-                },
-                error: function(xhr, status, error) {
-                    // Handle error response
-                    alert('An error occurred. Please try again.');
-                }
-            });
+      $('#contact-form').on('submit', function(e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Send the form data via AJAX
+        $.ajax({
+          url: 'your-backend-url-here', // Replace with your actual backend URL
+          type: 'POST',
+          data: $(this).serialize(),
+          success: function(response) {
+            // Handle success response
+            $('#success').show();
+            $('#error').hide();
+            $('#contact-form')[0].reset(); // Reset the form after success
+          },
+          error: function() {
+            // Handle error response
+            $('#error').show();
+            $('#success').hide();
+          }
         });
+      });
     });
-    </script>    
+  </script>
 </body>
 </html>

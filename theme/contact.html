@@ -1,441 +1,372 @@
 <!doctype html>
-
 <html lang="en">
-  <head>
-  <!-- Required meta tags -->
+<head>
+  <!-- Required meta tags and stylesheets -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  
   <meta name="author" content="Themefisher.com">
-
   <title>Techedmy</title>
 
-  <!-- bootstrap.min css -->
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-  <!-- Icofont Css -->
+  <!-- Icofont CSS -->
   <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
-  <!-- Themify Css -->
+  <!-- Themify CSS -->
   <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
-  <!-- animate.css -->
+  <!-- Animate.css -->
   <link rel="stylesheet" href="plugins/animate-css/animate.css">
-  <!-- Magnify Popup -->
+  <!-- Magnific Popup -->
   <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
-  <!-- Owl Carousel CSS -->
+  <!-- Slick Carousel CSS -->
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Load jQuery (ensure it's from a trusted CDN) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <style>
+  /* Your existing CSS styles here */
   .announcement {
-margin-bottom: 0;
-background-color: #fff6e5;
-padding: 5px 10px;
-position: fixed;  /* Fixes the announcement at the top */
-top: 0;           /* Make sure it's at the top of the page */
-width: 100%;
-z-index: 1100;    /* Ensure it's above other elements */
-border-bottom: 1px solid #ddd;
-}
+    margin-bottom: 0;
+    background-color: #fff6e5;
+    padding: 5px 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1100;
+    border-bottom: 1px solid #ddd;
+  }
 
-/* Ensure the navbar is below the announcement section */
-.navbar {
-margin-top: -10px;
-padding-top: 0;
-position: fixed;  /* Fix the navbar as well */
-top: 30px;        /* Adjust this value to match the height of the announcement */
-width: 100%;
-z-index: 1000;    /* Just below the announcement section */
-background-color: transparent;  /* Change to 'transparent' to retain the original color */
-/* Add your original navbar color here if needed, like background-color: #originalColor; */
-}
+  /* Ensure the navbar is below the announcement section */
+  .navbar {
+    margin-top: -10px;
+    padding-top: 0;
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
 
-/* Additional Announcement styling */
-.announcement-text {
-font-size: 16px;
-font-weight: 500;
-color: #000;
-}
+  /* Navbar when scrolled */
+  .navbar.scrolled {
+    background-color: black;
+    transition: background-color 0.3s ease;
+  }
 
-.apply-now {
-background-color: #ff8c00;
-color: #fff;
-padding: 5px 10px;
-text-decoration: none;
-border-radius: 5px;
-font-size: 14px;
-font-weight: bold;
-}
+  /* Additional Announcement styling */
+  .announcement-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+  }
 
-.apply-now:hover {
-background-color: #f79b33;
-}
+  .apply-now {
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
 
-/* Initial transparent navbar */
-.navbar {
-position: fixed;
-top: 50px; /* Adjust as needed */
-width: 100%;
-z-index: 9998;
-background-color: transparent;  /* Starts off transparent */
-transition: background-color 0.3s ease; /* Smooth transition */
-}
+  .apply-now:hover {
+    background-color: #f79b33;
+  }
 
-/* Navbar when scrolled */
-.navbar.scrolled {
-background-color: black; /* Changes to black on scroll */
-transition: background-color 0.3s ease; /* Smooth transition */
-}
+  /* Mobile view sliding effect */
+  @media (max-width: 768px) {
+    .announcement-text {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      animation: slide 15s linear infinite;
+    }
+  }
 
-
-/* Mobile view sliding effect */
-@media (max-width: 768px) {
-.announcement-text {
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    animation: slide 15s linear infinite;
-}
-}
-
-@keyframes slide {
-0% {
-    transform: translateX(100%);
-}
-100% {
-    transform: translateX(-100%);
-}
-}
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 </style>
 <script>
-window.addEventListener('scroll', function() {
-  var navbar = document.querySelector('.navbar');
-  var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollPosition > 50) { // Adjust this value for when you want the navbar to change color
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
+    if (scrollPosition > 50) { // Adjust this value for when you want the navbar to change color
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 </script>
-
 <body>
 
-<!-- Header Start -->
-<!-- Section Menu Start -->
-<section class="announcement">
-<div class="container">
-  <div class="row">
-    <div class="col-12 text-center">
-      <div class="announcement-text">
-        <b>Carrer Development Program - Rapid Application Development Program</b> 
-        <a href="#" class="apply-now">Apply Now</a>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-
-
-<!-- Header Start -->
-<nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
-<div class="container-fluid">
-  <a class="navbar-brand" href="index.html">
-    <h3 class="text-white text-capitalize"></i>Tech<span class="text-color">Edmy</span></h3>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
-    aria-controls="navbarsid" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="ti-view-list"></span>
-  </button>
-  <div class="collapse text-center navbar-collapse" id="navbarsid">
-    <ul class="navbar-nav mx-auto">
-      <!-- <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-      </li> -->
-      <li class="nav-item active">
-        <a class="nav-link" href="about.html">About </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="course.html">Programs </a>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-      <!-- <li class="nav-item"><a class="nav-link" href="pricing.html">Internships</a></li> -->
-      <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">Blog.</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="blog.html">Blog Grid</a></li>
-          <li><a class="dropdown-item" href="blog-sidebar.html">Blog Sidebar</a></li>
-          <li><a class="dropdown-item" href="blog-single.html">Blog Details</a></li>
-        </ul>
-      </li> -->
-      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-    </ul>
-    <!-- <div class="my-md-0 ml-lg-4 mt-4 mt-lg-0 ml-auto text-lg-right mb-3 mb-lg-0">
-      <a href="tel:+23-345-67890">
-        <h3 class="text-color mb-0"><i class="ti-mobile mr-2"></i>+23-563-5688</h3>
-      </a>
-    </div> -->
-  </div>
-</div>
-</nav>
-
-
-
-<!-- Header Close -->
-
-<div class="main-wrapper ">
-<section class="page-title bg-2" style="background: url('images/bg/bgg2.jpg') no-repeat center center; background-size: cover;">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item"><a href="index.html" class="text-sm letter-spacing text-white text-uppercase font-weight-bold">Home</a></li>
-            <li class="list-inline-item"><span class="text-white">|</span></li>
-            <li class="list-inline-item"><a href="#" class="text-color text-uppercase text-sm letter-spacing">contact</a></li>
-          </ul>
-           <h1 class="text-lg text-white mt-2">Contact Us</h1>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- contact form start -->
-<section class="contact-form section">
-  <div class="container">
-    <!-- <div class="row justify-content-center">
-      <div class="col-lg-8 text-center">
-        <div class="section-title">
-          <div class="divider mb-3"></div>
-          <h2>Contact Us</h2>
-          <p class="mt-3">Reach out to us for any inquiries, support or feedback.</p>
+  <!-- Header Start -->
+  <!-- Announcement Section -->
+  <section class="announcement">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="announcement-text">
+            <b>Career Development Program - Rapid Application Development Program</b>
+            <a href="#" class="apply-now">Apply Now</a>
+          </div>
         </div>
       </div>
-    </div> -->
+    </div>
+  </section>
 
-    <!-- <div class="row justify-content-center pb-5">
-      <div class="col-lg-9 text-center">
-        <form id="contact-form">
-          <div class="form-row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="form-group">
-                <input name="user_name" type="text" class="form-control" placeholder="Your Name">
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="form-group">
-                <input name="user_email" type="text" class="form-control" placeholder="Email Address">
-              </div>
-            </div>
-
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <div class="form-group-2">
-                <textarea name="user_message" class="form-control" rows="8" placeholder="Your Message"></textarea>
-              </div>
-
-              <div class="text-center">
-                <button class="btn btn-main mt-3 " type="submit">Send Message</button>
-              </div>
-            </div>
-          </div>
-          <div class="error" id="error">Sorry Msg dose not sent</div>
-          <div class="success" id="success">Message Sent</div>
-        </form>
-      </div>
-    </div> -->
-
-    <div class="row justify-content-center pb-5">
-      <div class="col-lg-9">
-        <form id="contact-form">
-          <div class="form-row">
-    
-            <!-- Left Column: Name, Email, Contact -->
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column">
-              <div class="form-group flex-grow-1 mb-2">
-                <input name="user_name" type="text" class="form-control" placeholder="Your Name">
-              </div>
-              <div class="form-group flex-grow-1 mb-2">
-                <input name="user_email" type="text" class="form-control" placeholder="Email Address">
-              </div>
-              <div class="form-group flex-grow-1 mb-0">
-                <input name="user_contact" type="text" class="form-control" placeholder="Contact Number">
-              </div>
-            </div>
-    
-            <!-- Right Column: Message -->
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column">
-              <div class="form-group-2 flex-grow-1 mb-0">
-                <textarea name="user_message" class="form-control h-100" placeholder="Your Message"></textarea>
-              </div>
-            </div>
-    
-            <!-- Submit Button -->
-            <div class="col-lg-12 text-center mt-2">
-              <button class="btn btn-main" type="submit">Send Message</button>
-            </div>
-    
-          </div>
-          <div class="error" id="error">Sorry Msg does not sent</div>
-          <div class="success" id="success">Message Sent</div>
-        </form>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <h3 class="text-white text-capitalize">Tech<span class="text-color">Edmy</span></h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
+        aria-controls="navbarsid" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="ti-view-list"></span>
+      </button>
+      <div class="collapse text-center navbar-collapse" id="navbarsid">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">About </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="course.html">Programs </a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </div>
-     
-  </div>
+  </nav>
+  <!-- Navbar End -->
 
-  <div class="google-map position-relative" style="margin-top: 130px;">
-    <!-- <div class="map" id="map_canvas" data-latitude="51.507351" data-longitude="-0.127758"
-      data-marker="images/marker.png"></div> -->
-  </div>
+  <!-- Main Wrapper -->
+  <div class="main-wrapper">
 
-  <div class="container mt--170">
-    <div class="row">
-      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-        <a href="tel:7742913163" class="text-black" style="text-decoration: none;">
-            <div class="card rounded-0 border-0 shadow-sm text-center py-5 px-4 contact-info">
+    <!-- Page Title Section -->
+    <section class="page-title bg-2" style="background: url('images/bg/bgg2.jpg') no-repeat center center; background-size: cover;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item"><a href="index.html" class="text-sm letter-spacing text-white text-uppercase font-weight-bold">Home</a></li>
+              <li class="list-inline-item"><span class="text-white">|</span></li>
+              <li class="list-inline-item"><a href="#" class="text-color text-uppercase text-sm letter-spacing">Contact</a></li>
+            </ul>
+            <h1 class="text-lg text-white mt-2">Contact Us</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Page Title End -->
+
+    <!-- Contact Form Section -->
+    <section class="contact-form section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-lg-9">
+            <form id="contact-form" action="api/sendmail.js" method="POST">
+              <div class="form-row">
+
+                <!-- Left Column: Name, Email, Contact -->
+                <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column">
+                  <div class="form-group flex-grow-1 mb-2">
+                    <input name="user_name" type="text" class="form-control" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group flex-grow-1 mb-2">
+                    <input name="user_email" type="email" class="form-control" placeholder="Email Address" required>
+                  </div>
+                  <div class="form-group flex-grow-1 mb-0">
+                    <input name="user_contact" type="text" class="form-control" placeholder="Contact Number">
+                  </div>
+                </div>
+
+                <!-- Right Column: Message -->
+                <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column">
+                  <div class="form-group-2 flex-grow-1 mb-0">
+                    <textarea name="user_message" class="form-control h-100" placeholder="Your Message" required></textarea>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-lg-12 text-center mt-2">
+                  <button class="btn btn-main" type="submit">Send Message</button>
+                </div>
+
+              </div>
+              <div class="alert alert-danger" id="error" style="display: none;">Sorry, your message was not sent.</div>
+              <div class="alert alert-success" id="success" style="display: none;">Message Sent Successfully!</div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Information Cards -->
+        <div class="row justify-content-center pb-5">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <a href="tel:7742913163" class="text-black" style="text-decoration: none;">
+              <div class="card rounded-0 border-0 shadow-sm text-center py-5 px-4 contact-info">
                 <i class="ti-mobile mb-3 text-lg text-color"></i>
                 <span>Call us</span>
                 <p class="lead text-black mb-0 mt-3">7742913163</p>
                 <p class="lead">10:00 am - 6:00 pm</p>
-            </div>
-        </a>
-      </div>    
-      <!-- <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-        <div class="card rounded-0 border-0 shadow-sm text-center py-5 px-4 contact-info">
-          <i class="ti-mobile mb-3 text-lg text-color"></i>
-          <span>Call us</span>
-          <p class="lead text-black mb-0 mt-3">7742913163</p>
-          <p class="lead">10:00 am - 6:00 pm</p>
-        </div>
-      </div> -->
-      <!-- <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-        <div class="card rounded-0 border-0 shadow-sm text-center py-5 px-4 contact-info">
-          <i class="ti-email mb-3 text-lg text-color"></i>
-          <span>Email at</span>
-          <p class="lead text-black mt-3 mb-0">support@techedmy.com</p>
-          <p class="lead text-black ">techedmy@gmail.com</p>
-        </div>
-      </div> -->
-      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-        <a href="mailto:support@techedmy.com" style="text-decoration: none;">
-            <div class="card rounded-0 border-0 shadow-sm text-center py-5 px-4 contact-info">
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <a href="mailto:support@techedmy.com" style="text-decoration: none;">
+              <div class="card rounded-0 border-0 shadow-sm text-center py-5 px-4 contact-info">
                 <i class="ti-email mb-3 text-lg text-color"></i>
                 <span>Email at</span>
                 <p class="lead text-black mt-3 mb-0">support@techedmy.com</p>
                 <p class="lead text-black">techedmy@gmail.com</p>
-            </div>
-        </a>
-    </div>
-          
-    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-      <a href="https://maps.app.goo.gl/A6ouZDPbLTwXaPh46" target="_blank" style="text-decoration: none;">
-          <div class="card rounded-0 border-0 shadow-sm text-center py-5 px-4 contact-info">
-              <i class="ti-home mb-3 text-lg text-color"></i>
-              <span>Location</span>
-              <p class="lead text-black mt-3">302022 <br>IT-2012(A), Ramchandrapura Industrial Area, RIICO IT Zone, Sitapura, Jaipur</p>
+              </div>
+            </a>
           </div>
-      </a>
-  </div>  
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <a href="https://maps.app.goo.gl/A6ouZDPbLTwXaPh46" target="_blank" style="text-decoration: none;">
+              <div class="card rounded-0 border-0 shadow-sm text-center py-5 px-4 contact-info">
+                <i class="ti-home mb-3 text-lg text-color"></i>
+                <span>Location</span>
+                <p class="lead text-black mt-3">302022 <br>IT-2012(A), Ramchandrapura Industrial Area, RIICO IT Zone, Sitapura, Jaipur</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="google-map position-relative" style="margin-top: 130px;">
+        <!-- Google Map Embed or Script can go here -->
+      </div>
+
+    </section>
+    <!-- Contact Form End -->
+
+    <!-- Footer Start -->
+    <footer class="footer bg-black-50">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <h2 class="text-white text-capitalize">Tech<span class="text-color">Edmy</span></h2>
+            <p>Elevate your tech career with TECHEDMY's expert mentorship and real-world training.</p>
+            <p>Experience hands-on learning and industry mentorship that prepares you for success.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <div class="footer-widget recent-blog">
+              <h4 class="mb-4 text-white letter-spacing text-uppercase">Most Popular Courses</h4>
+              <div>
+                <a href="" class="text-white">AI/ML</a>
+              </div>
+              <div class="mt-4">
+                <a href="mern.html" class="text-white">Fullstack Development</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-5 mb-5 mb-lg-0">
+            <div class="footer-widget">
+              <h4 class="mb-4 text-white letter-spacing text-uppercase">Quick Links</h4>
+              <ul class="list-unstyled footer-menu lh-40 mb-0">
+                <li><a href="about.html"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
+                <li><a href="service.html"><i class="ti-angle-double-right mr-2"></i>Services</a></li>
+                <li><a href="course.html"><i class="ti-angle-double-right mr-2"></i>Courses</a></li>
+                <li><a href="contact.html"><i class="ti-angle-double-right mr-2"></i>Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-5">
+            <div class="footer-widget">
+              <h4 class="mb-4 text-white letter-spacing text-uppercase">Headquarters</h4>
+              <span class="text-white">+91 7742913163, 9982688844</span>
+              <span class="text-white">techedmy@gmail.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center mt-5 px-3 bg-black mx-1">
+          <div class="col-lg-4">
+            <p class="text-white mt-3">techedmy@2024</p>
+          </div>
+          <div class="col-lg-6 ml-auto text-right">
+            <ul class="list-inline mb-0 footer-socials">
+              <li class="list-inline-item"><a href=""><i class="ti-facebook"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="ti-twitter"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="ti-reddit"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="ti-instagram"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="ti-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="ti-youtube"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="ti-whatsapp"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
   </div>
-  </div>
-</section>
 
-<!-- footer Start -->
-<footer class="footer bg-black-50">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-				<h2 class="text-white text-capitalize"></i>Tech<span class="text-color">Edmy</span></h2>
-				<p>Elevate your tech career with TECHEDMY's  expert mentorship and real-world training.</p>
-				<p>Experience hands-on learning and industry mentorship that prepares you for success.</p>
-			</div>
-			
+  <!-- Essential Scripts -->
+  <!-- Main jQuery -->
+  <script src="plugins/jquery/jquery.js"></script>
+  <!-- Bootstrap 4.3.1 -->
+  <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Slick Slider -->
+  <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+  <!-- Form Validator -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+  <script src="plugins/google-map/gmap.js"></script>
 
-			<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-				<div class="footer-widget recent-blog">
-					<h4 class="mb-4 text-white letter-spacing text-uppercase">Most Popular Courses</h4>
-					<div>
-						<a href=""class="text-white">AI/ML</a>
-						<!-- <p class="text-sm mt-2 text-white-50">22 June 2024</p> -->
-					</div>
-					<div class="mt-4">
-						<a href="mern.html"class="text-white">Fullstack Development</a>
-						<!-- <p class="text-sm mt-2 text-white-50">03 August 2024</p> -->
-					</div>
+  <!-- AJAX Form Submission Script -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+  <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+  <script src="plugins/waypoint/jquery.waypoints.min.js"></script>
+  <script src="plugins/counterup/jquery.counterup.min.js"></script>
+  <script src="js/theme.js"></script>
 
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-5 mb-5 mb-lg-0">
-				<div class="footer-widget">
-					<h4 class="mb-4 text-white letter-spacing text-uppercase">Quick Links</h4>
-					<ul class="list-unstyled footer-menu lh-40 mb-0">
-						<li><a href="about.html"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
-						<li><a href="service.html"><i class="ti-angle-double-right mr-2"></i>Services</a></li>
-						<!-- <li><a href="pricing.html"><i class="ti-angle-double-right mr-2"></i>Membership</a></li> -->
-						<li><a href="course.html"><i class="ti-angle-double-right mr-2"></i>Courses</a></li>
-						<li><a href="contact.html"><i class="ti-angle-double-right mr-2"></i>Contact us</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-5">
-				<div class="footer-widget">
-					<h4 class="mb-4 text-white letter-spacing text-uppercase">Headquarters</h4>
-					<!-- <p>Washington 6036 Richmond
-					hwy., Alexandria, VA USA 22303 </p> -->
-					<span class="text-white">+91 7742913163, 9982688844</span>
-					<span class="text-white">techedmy@gmail.com</span>
-				</div>
-			</div>
-		</div>
+  <!-- AJAX form submission -->
+  <script>
+    $(document).ready(function() {
+      $('#contact-form').on('submit', function(e) {
+        e.preventDefault(); // Prevent the default form submission
 
-		<div class="row align-items-center mt-5 px-3 bg-black mx-1">
-			<div class="col-lg-4">
-				<p class="text-white mt-3">techedmy@2024</p>
-			</div>
-			<div class="col-lg-6 ml-auto text-right">
-				<ul class="list-inline mb-0 footer-socials">
-					<li class="list-inline-item"><a href=""><i class="ti-facebook"></i></a></li>
-					<li class="list-inline-item"><a href=""><i class="ti-twitter"></i></a></li>
-					<li class="list-inline-item"><a href=""><i class="ti-reddit"></i></a></li>
-					<li class="list-inline-item"><a href=""><i class="ti-instagram"></i></a></li>
-					<li class="list-inline-item"><a href=""><i class="ti-linkedin"></i></a></li>
-					<li class="list-inline-item"><a href=""><i class="ti-youtube"></i></a></li>
-					<li class="list-inline-item"><a href=""><i class="ti-whatsapp"></i></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</footer>
-<!-- Section Footer End -->
-   </div>
-
-   <!-- 
-    Essential Scripts
-    =====================================-->
-
-
-   <!-- Main jQuery -->
-   <script src="plugins/jquery/jquery.js"></script>
-   <!-- Bootstrap 4.3.1 -->
-   <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-   <!-- Slick Slider -->
-   <script src="plugins/slick-carousel/slick/slick.min.js"></script>
-   <!--  Magnific Popup-->
-   <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-   <!-- Form Validator -->
-   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
-   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
-   <!-- Google Map -->
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-   <script src="plugins/google-map/gmap.js"></script>
-
-   <script src="js/script.js"></script>
-
-   </body>
-
-   </html>
+        // Send the form data via AJAX
+        $.ajax({
+          url: 'your-backend-url-here', // Replace with your actual backend URL
+          type: 'POST',
+          data: $(this).serialize(),
+          success: function(response) {
+            // Handle success response
+            $('#success').show();
+            $('#error').hide();
+            $('#contact-form')[0].reset(); // Reset the form after success
+          },
+          error: function() {
+            // Handle error response
+            $('#error').show();
+            $('#success').hide();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
