@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
 
  
 </head>
@@ -339,16 +340,55 @@
 <!-- Section Slider Start -->
 <!-- Slider Start -->
 <section class="slider" alt="Techedmy" style="background: url('images/bg/main.jpg') no-repeat fixed center center; background-size: cover;">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8">
-				<span class="h6 d-inline-block mb-4 subhead text-uppercase">Your Gateway to Industry-Ready Skills</span>
-				<h1 class="text-uppercase text-white mb-5">Step up your <span class="text-color">Career in Tech</span><br>with </i>Tech<span class="text-color">edmy</span></h1>
-			
-				<a href="" target="_blank" class="btn btn-main " >Join Us <i class="ti-angle-right ml-3"></i></a>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <span class="h6 d-inline-block mb-4 subhead text-uppercase">Your Gateway to Industry-Ready Skills</span>
+                <h1 class="text-uppercase text-white mb-5">Step up your <span class="text-color">Career in Tech</span><br>with Tech<span class="text-color">edmy</span></h1>
+
+                <button type="button" class="btn btn-main" data-bs-toggle="modal" data-bs-target="#registrationModal">
+                    Join Now<i class="ti-angle-right ml-3"></i>
+                </button>
+
+                <!-- Modal for Registration Form -->
+                <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="registrationModalLabel">Student Registration Form</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3Example1m" class="form-control form-control-lg" required/>
+                                                <label class="form-label" for="form3Example1m">First name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3Example1n" class="form-control form-control-lg" required/>
+                                                <label class="form-label" for="form3Example1n">Last name</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Other form fields... -->
+
+                                    <div class="d-flex justify-content-end pt-3">
+                                        <button type="reset" class="btn btn-light btn-lg">Reset all</button>
+                                        <button type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Section Slider End -->
 
@@ -628,73 +668,7 @@
 	}
 </style>
 
-<!-- Section Course Start -->
-<!-- <section class="section course bg-gray">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-8 text-center">
-				<div class="section-title">
-					<div class="divider mb-3"></div>
-					<h2>Popular Courses</h2>
-					<p>We offer variety of courses to choose from.</p>
-				</div>
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="col-lg-3 col-md-6">
-				<div class="card border-3 rounded-3 p-0 mb-5 mb-lg-0 shadow-sm">
-					<a href="rad.html"><img src="images/gallery/RAD Small.png" alt="" class="img-fluid" style="width: 100%; height: auto; display: block;"></a>
-					<div class="card-body">
-						<a href="rad.html"><h4 class="font-secondary mb-0">RAD</h4></a>
-						<p class=" mb-2">Rapid App Development</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="card border-3 rounded-3 p-0 mb-5 mb-lg-0 shadow-sm">
-					<a href="bi.html"><img src="images/gallery/bi.jpg" alt="BI" class="img fluid"  style="width: 100%; height: auto; display: block; "></a>
-					<div class="card-body">
-						<a href="bi.html"><h4 class="font-secondary mb-0">Business Intelligence</h4></a>
-						<p class=" mb-2">Data-driven insights.</p>
-					</div>
-				</div>
-			</div>
-            
-			<div class="col-lg-3 col-md-6">
-				<div class="card border-3 rounded-3 p-0 mb-5 mb-lg-0 shadow-sm">
-					<a href="uxdesign.html"><img src="images/gallery/image 30.png" alt="" class="img-fluid"></a>
-					<div class="card-body">
-						<a href="uxdesign.html"><h4 class="font-secondary mb-0">UI/UX Designing</h4></a>
-						<p class=" mb-2">User Experience Design</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6">
-				<div class="card border-3 rounded-3 p-0 mb-5 mb-lg-0 shadow-sm">
-					<a href="AI_ML.html"><img src="images/gallery/ai.jpg" alt="" class="img-fluid" style="width: 100%; height: auto; display: block;"></a>
-					<div class="card-body">
-						<a href="AI_ML.html"><h4 class="font-secondary mb-0">AI/ML</h4></a>
-						<p class=" mb-2">Intelligent automated systems.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row justify-content-center">
-			<div class="col-lg-8">
-				<div class="mt-5 text-center">
-					<a href="course.html" class="btn btn-main">See all our Courses</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
-<!-- Section Course ENd -->
-
-
-
-<!-- Section Footer Start -->
 <!-- footer Start -->
 <!-- footer Start -->
 <footer class="footer bg-black-50">
@@ -711,11 +685,11 @@
 				<div class="footer-widget recent-blog">
 					<h4 class="mb-4 text-white letter-spacing text-uppercase">Most Popular Courses</h4>
 					<div>
-						<a href=""class="text-white">AI/ML</a>
+						<a href="AI_ML.html"class="text-white">AI/ML</a>
 						<!-- <p class="text-sm mt-2 text-white-50">22 June 2024</p> -->
 					</div>
 					<div class="mt-4">
-						<a href="mern.html"class="text-white">Fullstack Development</a>
+						<a href="rad.html"class="text-white">RAD</a>
 						<!-- <p class="text-sm mt-2 text-white-50">03 August 2024</p> -->
 					</div>
 
@@ -790,6 +764,15 @@
    <script src="plugins/google-map/gmap.js"></script>
 
    <script src="js/script.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- jQuery Validate Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+<!-- Your custom script -->
+<script src="path/to/your/script.js"></script>
 
    </body>
 
