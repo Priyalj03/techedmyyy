@@ -8,109 +8,118 @@
   <meta name="author" content="Themefisher.com">
   <title>Techedmy</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- bootstrap.min css -->
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-  <!-- Icofont CSS -->
+  <!-- Icofont Css -->
   <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
-  <!-- Themify CSS -->
+  <!-- Themify Css -->
   <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
-  <!-- Animate.css -->
+  <!-- animate.css -->
   <link rel="stylesheet" href="plugins/animate-css/animate.css">
-  <!-- Magnific Popup -->
+  <!-- Magnify Popup -->
   <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
-  <!-- Slick Carousel CSS -->
+  <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  <!-- Load jQuery (ensure it's from a trusted CDN) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <style>
-  /* Your existing CSS styles here */
-  .announcement {
-    margin-bottom: 0;
-    background-color: #fff6e5;
-    padding: 5px 10px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1100;
-    border-bottom: 1px solid #ddd;
-  }
+    .announcement {
+  margin-bottom: 0;
+  background-color: #fff6e5;
+  padding: 5px 10px;
+  position: fixed;  /* Fixes the announcement at the top */
+  top: 0;           /* Make sure it's at the top of the page */
+  width: 100%;
+  z-index: 1100;    /* Ensure it's above other elements */
+  border-bottom: 1px solid #ddd;
+}
 
-  /* Ensure the navbar is below the announcement section */
-  .navbar {
-    margin-top: -10px;
-    padding-top: 0;
-    position: fixed;
-    top: 30px;
-    width: 100%;
-    z-index: 1000;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-  }
+/* Ensure the navbar is below the announcement section */
+.navbar {
+  margin-top: -10px;
+  padding-top: 0;
+  position: fixed;  /* Fix the navbar as well */
+  top: 30px;        /* Adjust this value to match the height of the announcement */
+  width: 100%;
+  z-index: 1000;    /* Just below the announcement section */
+  background-color: transparent;  /* Change to 'transparent' to retain the original color */
+  /* Add your original navbar color here if needed, like background-color: #originalColor; */
+}
 
-  /* Navbar when scrolled */
-  .navbar.scrolled {
-    background-color: black;
-    transition: background-color 0.3s ease;
-  }
+/* Additional Announcement styling */
+.announcement-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
 
-  /* Additional Announcement styling */
+.apply-now {
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.apply-now:hover {
+  background-color: #f79b33;
+}
+
+/* Initial transparent navbar */
+.navbar {
+  position: fixed;
+  top: 50px; /* Adjust as needed */
+  width: 100%;
+  z-index: 9998;
+  background-color: transparent;  /* Starts off transparent */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background-color: black; /* Changes to black on scroll */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+/* Mobile view sliding effect */
+@media (max-width: 768px) {
   .announcement-text {
-    font-size: 16px;
-    font-weight: 500;
-    color: #000;
-  }
-
-  .apply-now {
-    background-color: #ff8c00;
-    color: #fff;
-    padding: 5px 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
-  .apply-now:hover {
-    background-color: #f79b33;
-  }
-
-  /* Mobile view sliding effect */
-  @media (max-width: 768px) {
-    .announcement-text {
       white-space: nowrap;
       overflow: hidden;
       position: relative;
       display: inline-block;
       animation: slide 15s linear infinite;
-    }
   }
+}
 
-  @keyframes slide {
-    0% {
+@keyframes slide {
+  0% {
       transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
   }
+  100% {
+      transform: translateX(-100%);
+  }
+}
 </style>
 <script>
-  window.addEventListener('scroll', function() {
-    var navbar = document.querySelector('.navbar');
-    var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+	window.addEventListener('scroll', function() {
+		var navbar = document.querySelector('.navbar');
+		var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollPosition > 50) { // Adjust this value for when you want the navbar to change color
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
+		if (scrollPosition > 50) { // Adjust this value for when you want the navbar to change color
+			navbar.classList.add('scrolled');
+		} else {
+			navbar.classList.remove('scrolled');
+		}
+	});
 </script>
+
 <body>
 
   <!-- Header Start -->
