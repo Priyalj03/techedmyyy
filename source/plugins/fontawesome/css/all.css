@@ -978,8 +978,8 @@ ul.dropdown-menu li {
 }
 
 .brand-logo {
-    height: 30px;
-    width: 50px; /* Slightly decrease the width of the logos */
+    height: 20px;
+    width: 40px; /* Slightly decrease the width of the logos */
 }
 
 /* Responsive adjustments for mobile view */
@@ -989,8 +989,8 @@ ul.dropdown-menu li {
     }
 
     .brand-logo {
-        height: 25px; /* Adjust logo size for smaller screens */
-        width: 45px; /* Slightly decrease the width of the logos for mobile */
+        height: 15px; /* Adjust logo size for smaller screens */
+        width: 35px; /* Slightly decrease the width of the logos for mobile */
         margin-right: 5px;
     }
 }
