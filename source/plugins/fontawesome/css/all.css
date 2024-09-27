@@ -967,29 +967,30 @@ ul.dropdown-menu li {
   }
 
   /* ////////// logo */
-.navbar-brand-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centers the logos horizontally */
+  .navbar-brand-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the logos horizontally */
 }
 
 .navbar-brand {
-  margin-right: 10px; /* Adds spacing between the logos */
+    margin-right: 10px; /* Adds spacing between the logos */
 }
 
 .brand-logo {
-  height: 30px;
-  width: auto; /* Keeps the aspect ratio intact */
+    height: 30px;
+    width: 50px; /* Slightly decrease the width of the logos */
 }
 
 /* Responsive adjustments for mobile view */
 @media (max-width: 768px) {
-  .navbar-brand-wrapper {
-      justify-content: space-around; /* Ensures proper spacing between logos */
-  }
+    .navbar-brand-wrapper {
+        justify-content: space-around; /* Ensures proper spacing between logos */
+    }
 
-  .brand-logo {
-      height: 25px; /* Adjust logo size for smaller screens */
-      margin-right: 5px;
-  }
+    .brand-logo {
+        height: 25px; /* Adjust logo size for smaller screens */
+        width: 45px; /* Slightly decrease the width of the logos for mobile */
+        margin-right: 5px;
+    }
 }

@@ -986,7 +986,7 @@ form */
 
 .brand-logo {
   height: 30px;
-  width: auto; /* Keeps the aspect ratio intact */
+  width: 50px; /* Slightly decrease the width of the logos */
 }
 
 /* Responsive adjustments for mobile view */
@@ -997,6 +997,7 @@ form */
 
   .brand-logo {
       height: 25px; /* Adjust logo size for smaller screens */
+      width: 45px; /* Slightly decrease the width of the logos for mobile */
       margin-right: 5px;
   }
 }
