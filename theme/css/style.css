@@ -945,3 +945,32 @@ ul.dropdown-menu li {
 .btn-gradient:hover {
   background: linear-gradient(45deg, #ff9800, #ff5722);
 }
+
+/* ////////// logo */
+.navbar-brand-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the logos horizontally */
+}
+
+.navbar-brand {
+  margin-right: 10px; /* Adds spacing between the logos */
+}
+
+.brand-logo {
+  height: 20px;
+  width: 40px; /* Slightly decrease the width of the logos */
+}
+
+/* Responsive adjustments for mobile view */
+@media (max-width: 768px) {
+  .navbar-brand-wrapper {
+      justify-content: space-around; /* Ensures proper spacing between logos */
+  }
+
+  .brand-logo {
+      height: 15px; /* Adjust logo size for smaller screens */
+      width: 35px; /* Slightly decrease the width of the logos for mobile */
+      margin-right: 5px;
+  }
+}
