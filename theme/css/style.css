@@ -235,9 +235,15 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   display: none;
 }
 
-.text-color {
+/* .text-color {
   color: rgb(245, 99, 75);
+} */
+.text-color {
+  background: linear-gradient(90deg, rgb(245, 99, 75) 0%, #fe9418 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 
 .text-black {
   color: #232323;
