@@ -241,10 +241,13 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
    color: rgb(245, 99, 75); 
 } */
 .text-color {
-  background-image: linear-gradient(to right, #ff9800, #ff5722);
-  -webkit-background-clip: text;
-  color: transparent;
+  background: linear-gradient(90deg, rgb(245, 99, 75) 0%, #fe9418 100%);
+  background-clip: text;
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari, etc.) */
+  color: transparent; /* Ensures the text itself is transparent */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
 }
+
 
 
 .text-black {
