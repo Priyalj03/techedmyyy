@@ -201,8 +201,8 @@ input[type="email"],input[type="password"],input[type="text"],input[type="tel"]{
 }
 
 
-.text-color{
-  color: $primary-color;
+.text-color {
+  color: rgb(254, 148, 24) !important; /* Ensures the text color is applied */
 }
 
 .text-black{
