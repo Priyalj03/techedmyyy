@@ -200,10 +200,17 @@ input[type="email"],input[type="password"],input[type="text"],input[type="tel"]{
     display: none;
 }
 
-
 .text-color {
-  color: rgb(254, 148, 24) !important; /* Ensures the text color is applied */
+  background: linear-gradient(90deg, rgb(254, 148, 24) 0%, rgb(255, 152, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text; /* For WebKit browsers */
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
 }
+
+// .text-color {
+//   color: rgb(254, 148, 24) !important; /* Ensures the text color is applied */
+// }
 
 .text-black{
   color: $black;
