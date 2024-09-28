@@ -235,8 +235,8 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   display: none;
 }
 
-.text-colorr {
-   color: rgb(254, 148, 24); 
+.text-color {
+  color: rgb(254, 148, 24) !important; /* Ensures the text color is applied */
 }
 
 
