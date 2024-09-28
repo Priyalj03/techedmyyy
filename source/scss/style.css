@@ -241,7 +241,11 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .text-color {
-  color: rgb(254, 148, 24) !important; /* Ensures the text color is applied */
+  background: linear-gradient(90deg, rgb(245, 99, 75) 0%, #fe9418 100%);
+  background-clip: text;
+  -webkit-background-clip: text; /* For WebKit browsers */
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
 }
 
 
