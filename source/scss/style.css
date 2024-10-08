@@ -1003,25 +1003,61 @@ form */
 
 
 /* /////services page  */
-.hiring-points {
-  font-size: 1.1rem;
+/* Styling for the internship section */
+.internships-section {
+  background-color: #f8f9fa; /* Light background */
+  padding: 60px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.internships-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.internships-section p {
+  font-size: 1.2rem;
   color: #555;
-  margin: 0;
-  padding-left: 20px;
-  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
-.hiring-points li {
+.internship-points {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+  padding-left: 0; /* Remove default padding */
+}
+
+.internship-points li {
   margin-bottom: 15px;
-  list-style-type: disc;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
 }
 
+/* Adding checkmark icons */
+.internship-points li i {
+  color: #28a745;
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+/* Responsive for smaller screens */
 @media (max-width: 768px) {
-  .hiring-points {
+  .internships-section h2 {
+      font-size: 2rem;
+  }
+
+  .internships-section p,
+  .internship-points li {
       font-size: 1rem;
   }
 
-  .hiring-points li {
-      margin-bottom: 12px;
+  .internship-points li i {
+      font-size: 1.1rem;
   }
 }
+
