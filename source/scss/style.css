@@ -1005,59 +1005,74 @@ form */
 /* /////services page  */
 /* Styling for the internship section */
 .internships-section {
-  background-color: #f8f9fa; /* Light background */
+  background-color: #f9f9f9;
   padding: 60px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-.internships-section h2 {
-  font-size: 2.5rem;
+.internship-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  border: none;
+}
+
+.internship-card:hover {
+  transform: translateY(-5px);
+}
+
+.internship-card .card-title {
+  font-size: 1.5rem;
   color: #333;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
-.internships-section p {
-  font-size: 1.2rem;
+.internship-card .card-text {
+  font-size: 1rem;
   color: #555;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .internship-points {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #444;
-  line-height: 1.8;
-  padding-left: 0; /* Remove default padding */
+  padding-left: 0;
+  line-height: 1.6;
 }
 
 .internship-points li {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
-  font-size: 1.1rem;
 }
 
-/* Adding checkmark icons */
 .internship-points li i {
   color: #28a745;
   margin-right: 10px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
-/* Responsive for smaller screens */
+/* Responsive */
+@media (max-width: 992px) {
+  .internship-card {
+      margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 768px) {
-  .internships-section h2 {
-      font-size: 2rem;
+  .internship-card .card-title {
+      font-size: 1.3rem;
   }
 
-  .internships-section p,
+  .internship-card .card-text,
   .internship-points li {
-      font-size: 1rem;
+      font-size: 0.9rem;
   }
 
   .internship-points li i {
-      font-size: 1.1rem;
+      font-size: 1rem;
   }
 }
+
 
