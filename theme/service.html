@@ -324,10 +324,137 @@
         </div>
     </div>
 </section> -->
+<style>
+    .internship-card {
+        border-radius: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .internship-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .internships-section .card:nth-child(odd) {
+        background-color: #f8f9fa; /* Light background for odd cards */
+    }
+
+    .internships-section .card:nth-child(even) {
+        background-color: #333;
+        color: #fff; /* Dark background and white text for even cards */
+    }
+
+    .internships-section .card:nth-child(even) .internship-points li i {
+        color: #fff; /* Adjust icon color for dark background */
+    }
+
+    .internship-card h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    .internship-card .card-text {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .internship-points li {
+        margin-bottom: 10px;
+    }
+
+    .internship-points li i {
+        color: #28a745;
+        margin-right: 8px;
+    }
+</style>
+
 <section class="section internships-section pt-0" style="margin-top: 0; padding-top: 10px;">
     <div class="container">
         <div class="row justify-content-center py-3">
             <!-- Card 1 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="card internship-card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Internships</h3>
+                        <p class="card-text">
+                            We partner with leading IT companies to offer students internships that enhance their practical knowledge and technical skills. During the internship, students:
+                        </p>
+                        <ul class="list-unstyled internship-points">
+                            <li><i class="fas fa-check-circle"></i> Apply classroom concepts to solve actual business problems.</li>
+                            <li><i class="fas fa-check-circle"></i> Gain exposure to the latest industry tools and methodologies.</li>
+                            <li><i class="fas fa-check-circle"></i> Work under mentorship of IT professionals.</li>
+                            <li><i class="fas fa-check-circle"></i> Receive career growth guidance.</li>
+                            <li><i class="fas fa-check-circle"></i> Build a project portfolio to strengthen their resume.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="card internship-card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Job Placements</h3>
+                        <p class="card-text">
+                            Our IT training program doesn't just end with skill development; we take it a step further by offering comprehensive placement support. Through our network of industry contacts and partner companies, we provide:
+                        </p>
+                        <ul class="list-unstyled internship-points">
+                            <li><i class="fas fa-check-circle"></i> Job matching</li>
+                            <li><i class="fas fa-check-circle"></i> Resume and LinkedIn optimization</li>
+                            <li><i class="fas fa-check-circle"></i> Mock interviews</li>
+                            <li><i class="fas fa-check-circle"></i> Direct placement assistance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="card internship-card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Aptitude Training</h3>
+                        <p class="card-text">
+                            Aptitude tests are a critical component of the recruitment process, especially in the IT sector. To ensure that our students excel in these tests, we offer specialized aptitude training that focuses on:
+                        </p>
+                        <ul class="list-unstyled internship-points">
+                            <li><i class="fas fa-check-circle"></i> Quantitative reasoning</li>
+                            <li><i class="fas fa-check-circle"></i> Logical reasoning</li>
+                            <li><i class="fas fa-check-circle"></i> Verbal ability</li>
+                            <li><i class="fas fa-check-circle"></i> Coding aptitude</li>
+                            <li><i class="fas fa-check-circle"></i> Practice sessions and mock tests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class="card internship-card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Soft Skills Training</h3>
+                        <p class="card-text">
+                            Our soft skills training equips students with the ability to communicate effectively, collaborate with teams, and present themselves professionally. Key areas of focus include:
+                        </p>
+                        <ul class="list-unstyled internship-points">
+                            <li><i class="fas fa-check-circle"></i> Communication skills</li>
+                            <li><i class="fas fa-check-circle"></i> Teamwork and collaboration</li>
+                            <li><i class="fas fa-check-circle"></i> Presentation skills</li>
+                            <li><i class="fas fa-check-circle"></i> Time management and organization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="section internships-section pt-0" style="margin-top: 0; padding-top: 10px;">
+    <div class="container">
+        <div class="row justify-content-center py-3">
+            
             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                 <div class="card internship-card h-100">
                     <div class="card-body">
@@ -346,7 +473,7 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
+            
             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                 <div class="card internship-card h-100">
                     <div class="card-body">
@@ -355,16 +482,16 @@
                             Our IT training program doesn't just end with skill development; we take it a step further by offering comprehensive placement support. Through our network of industry contacts and partner companies, we provide:
                         </p>
                         <ul class="list-unstyled internship-points">
-                            <li><i class="fas fa-check-circle"></i>Job matching: Based on student profiles, technical expertise, and career aspirations, we identify suitable job opportunities in the IT sector.</li>
-                            <li><i class="fas fa-check-circle"></i>Resume and LinkedIn optimization: We help students create standout resumes and optimize their LinkedIn profiles to highlight their strengths and achievements.</li>
-                            <li><i class="fas fa-check-circle"></i>Mock interviews: Students undergo technical and behavioural interview simulations to boost confidence, enhance performance, and get accustomed to the recruitment process.</i>
-                            <li><i class="fas fa-check-circle"></i>Direct placement assistance: We arrange interviews with top IT companies, from startups to multinational corporations, ensuring students have access to exciting career opportunities.</li>
+                            <li><i class="fas fa-check-circle"></i>Job matching</li>
+                            <li><i class="fas fa-check-circle"></i>Resume and LinkedIn optimization</li>
+                            <li><i class="fas fa-check-circle"></i>Mock interviews</i>
+                            <li><i class="fas fa-check-circle"></i>Direct placement assistanceess </li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 3 -->
+            
             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                 <div class="card internship-card h-100">
                     <div class="card-body">
@@ -373,17 +500,17 @@
                             Aptitude tests are a critical component of the recruitment process, especially in the IT sector. To ensure that our students excel in these tests, we offer specialized aptitude training that focuses on:
                         </p>
                         <ul class="list-unstyled internship-points">
-                            <li><i class="fas fa-check-circle"></i>Quantitative reasoning: Strengthening students' mathematical abilities, including topics like algebra, percentages, probability, and data interpretation</li>
-                            <li><i class="fas fa-check-circle"></i>Logical reasoning: Enhancing problem-solving skills through practice in puzzles, patterns, sequences, and logical deductions.</li>
-                            <li><i class="fas fa-check-circle"></i>Verbal ability: Improving comprehension and communication skills with modules on grammar, sentence correction, and reading comprehension.</li>
-                            <li><i class="fas fa-check-circle"></i>Coding aptitude: Familiarizing students with algorithm-based problem solving and optimizing their approach to technical coding tests</li>
-                            <li><i class="fas fa-check-circle"></i>Practice sessions and mock tests: We provide regular assessments and simulated tests to help students develop speed, accuracy, and confidence. This comprehensive aptitude training is designed to ensure students perform well in the initial screening rounds of company recruitment processes.</li>
+                            <li><i class="fas fa-check-circle"></i>Quantitative reasoning</li>
+                            <li><i class="fas fa-check-circle"></i>Logical reasoning</li>
+                            <li><i class="fas fa-check-circle"></i>Verbal ability</li>
+                            <li><i class="fas fa-check-circle"></i>Coding aptitude</li>
+                            <li><i class="fas fa-check-circle"></i>Practice sessions and mock tests</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Card 4 -->
+            
             <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                 <div class="card internship-card h-100">
                     <div class="card-body">
@@ -391,18 +518,17 @@
                         <p class="card-text">
                             Our soft skills training equips students with the ability to communicate effectively, collaborate with teams, and present themselves professionally. Key areas of focus include:
                         <ul class="list-unstyled internship-points">
-                            <li><i class="fas fa-check-circle"></i>Communication skills: Enhancing verbal and written communication to improve clarity, professionalism, and persuasion</li>
-                            <li><i class="fas fa-check-circle"></i>Teamwork and collaboration: Teaching students how to work cohesively in team settings, resolve conflicts, and contribute effectively to projects.</li>
-                            <li><i class="fas fa-check-circle"></i>Presentation skills: Building the confidence to present ideas and technical concepts to diverse audiences, including clients, colleagues, and management.</li>
-                            <li><i class="fas fa-check-circle"></i>Time management and organization: Helping students balance multiple tasks, prioritize effectively, and manage time in a fast-paced work environment.</li>
-                            <li><i class="fas fa-check-circle"></i>Leadership and adaptability: Fostering leadership qualities, adaptability to change, and proactive problem-solving in dynamic situations. Our soft skills training ensures students are prepared to not only land good jobs but also thrive and grow in their roles.</li>
+                            <li><i class="fas fa-check-circle"></i>Communication skills</li>
+                            <li><i class="fas fa-check-circle"></i>Teamwork and collaboration</li>
+                            <li><i class="fas fa-check-circle"></i>Presentation skills</li>
+                            <li><i class="fas fa-check-circle"></i>Time management and organization</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 
