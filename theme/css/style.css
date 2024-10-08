@@ -983,8 +983,10 @@ form */
 }
 
 .brand-logo {
-  height: 20px;
-  width: 50px; /* Slightly decrease the width of the logos */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 50px; /* Set a max height to prevent logos from being too large */
+  max-width: 100%; /* Ensure logos do not overflow their container */
+  width: auto; /* Allows for flexible width */
 }
 
 /* Responsive adjustments for mobile view */
@@ -994,11 +996,11 @@ form */
   }
 
   .brand-logo {
-      height: 15px; /* Adjust logo size for smaller screens */
-      width: 35px; /* Slightly decrease the width of the logos for mobile */
-      margin-right: 5px;
+      max-height: 30px; /* Adjust logo size for smaller screens */
+      margin-right: 5px; /* Adjust spacing for mobile */
   }
 }
+
 
 
 
