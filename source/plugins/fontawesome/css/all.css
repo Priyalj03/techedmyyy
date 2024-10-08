@@ -989,3 +989,28 @@ ul.dropdown-menu li {
         margin-right: 5px;
     }
 }
+
+
+/* /////services page  */
+.hiring-points {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.hiring-points li {
+  margin-bottom: 15px;
+  list-style-type: disc;
+}
+
+@media (max-width: 768px) {
+  .hiring-points {
+      font-size: 1rem;
+  }
+
+  .hiring-points li {
+      margin-bottom: 12px;
+  }
+}
