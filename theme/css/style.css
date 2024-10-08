@@ -1,4 +1,9 @@
-
+/**
+ * WEBSITE: https://themefisher.com
+ * TWITTER: https://twitter.com/themefisher
+ * FACEBOOK: https://www.facebook.com/themefisher
+ * GITHUB: https://github.com/themefisher/
+ */
 
 /*=== MEDIA QUERY ===*/
 @import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,600,700|Montserrat|Poppins:400,500,600,700");
@@ -236,10 +241,12 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .text-color {
-  color: rgb(254, 148, 24) !important; /* Ensures the text color is applied */
+  background: linear-gradient(90deg, rgb(245, 99, 75) 0%, #fe9418 100%);
+  background-clip: text;
+  -webkit-background-clip: text; /* For WebKit browsers */
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
 }
-
-
 
 
 
@@ -950,6 +957,20 @@ ul.dropdown-menu li {
   background: linear-gradient(45deg, #ff9800, #ff5722);
 }
 
+/* 
+form */
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+  }
+  .card-registration .select-arrow {
+  top: 13px;
+  }
+
+
 /* ////////// logo */
 .navbar-brand-wrapper {
   display: flex;
@@ -978,3 +999,80 @@ ul.dropdown-menu li {
       margin-right: 5px;
   }
 }
+
+
+
+/* /////services page  */
+/* Styling for the internship section */
+.internships-section {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.internship-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  border: none;
+}
+
+.internship-card:hover {
+  transform: translateY(-5px);
+}
+
+.internship-card .card-title {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.internship-card .card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.internship-points {
+  font-size: 1rem;
+  color: #444;
+  padding-left: 0;
+  line-height: 1.6;
+}
+
+.internship-points li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.internship-points li i {
+  color: #28a745;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .internship-card {
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .internship-card .card-title {
+      font-size: 1.3rem;
+  }
+
+  .internship-card .card-text,
+  .internship-points li {
+      font-size: 0.9rem;
+  }
+
+  .internship-points li i {
+      font-size: 1rem;
+  }
+}
+
+
