@@ -1,16 +1,14 @@
 <!doctype html>
 
+
 <html lang="en">
   <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="TECHEDMY">
-    
-  <!-- theme meta -->
-  <meta name="theme-name" content="gymfit" />
+  <meta name="description" content="">
   
-  <meta name="author" content="Themefisher.com">
+  <meta name="author" content="">
 
   <title>Techedmy</title>
 
@@ -30,9 +28,7 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
- 
 </head>
-
 <style>
     .announcement {
   margin-bottom: 0;
@@ -114,300 +110,190 @@
       transform: translateX(-100%);
   }
 }
+</style>
+<script>
+	window.addEventListener('scroll', function() {
+		var navbar = document.querySelector('.navbar');
+		var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
+		if (scrollPosition > 50) { // Adjust this value for when you want the navbar to change color
+			navbar.classList.add('scrolled');
+		} else {
+			navbar.classList.remove('scrolled');
+		}
+	});
+</script>
+<body>
 
-/* //////////////////////////// */
-/* Card Styling */
-/* Banner styling (if not already present) */
-.banner {
-  position: relative;
-  height: 400px; /* Adjust as needed */
-  background: url('path-to-your-banner-image.jpg') no-repeat center center;
-  background-size: cover;
-}
+  <!-- Header Start -->
+  <!-- Section Menu Start -->
+  <section class="announcement">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="announcement-text">
+            <b>TECHEDGE - Industry Focused Tech Internship</b> 
+            <a href="https://forms.gle/FgR6YtdGeaNdWwSM7" target="_blank" class="apply-now">Connect with Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* Card styling */
-.styled-card {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  padding: 20px;
-  max-width: 100%;
-  transition: transform 0.3s ease;
-  position: relative;
-  top: -100px; /* Moves the card up over the banner */
-  margin: 0 auto;
-  z-index: 10; /* Ensures the card stays on top of the banner */
-}
+<section class="h-100 bg-dark">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <img src=""
+                alt="Sample photo" class="img-fluid"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+            </div>
+            <div class="col-xl-6">
+              <div class="card-body p-md-5 text-black">
+                <h3 class="mb-5 text-uppercase">Student registration form</h3>
 
-.styled-card:hover {
-  transform: scale(1.05);
-}
-
-.card-image {
-  flex: 1;
-  max-width: 40%;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.card-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.card-content {
-  flex: 2;
-  padding-left: 20px;
-}
-
-/* Media query for mobile view */
-@media (max-width: 768px) {
-  .styled-card {
-    flex-direction: column; /* Stack image and text vertically */
-    top: -50px; /* Adjust for smaller screens */
-  }
-
-  .card-image {
-    max-width: 100%; /* Make image full-width in mobile view */
-    margin-bottom: 20px; /* Add space between image and content */
-  }
-
-  .card-content {
-    padding-left: 0; /* Remove left padding for mobile view */
-  }
-}
-
-
-.card-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.card-description {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.btn-gradient {
-  display: inline-block;
-  padding: 10px 20px;
-  background: linear-gradient(45deg, #ff5722, #ff9800);
-  color: #fff;
-  border-radius: 25px;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(45deg, #ff9800, #ff5722);
-}
-
-/* Shifting the section upwards */
-.section.about {
-  margin-top: -50px; /* Adjust the value as needed to move the section up */
-}
-
-/* Additional styling for spacing */
-.section {
-  padding: 60px 0; /* You can adjust the padding for the section */
-}
-
-/* Card Styling */
-.card {
-  border-radius: 20px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
-  overflow: hidden; /* To ensure the image and content don't overflow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
-}
-
-.card img {
-  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
-}
-
-.card:hover {
-  transform: scale(1.05); /* Zoom effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-}
-
-.card:hover img {
-  transform: scale(1.1); /* Zoom in on the image when hovering */
-}
-
-.card-body {
-  padding: 20px; /* Add some padding inside the card body */
-  text-align: center; /* Center the text content */
-}
-
-.card-body h4 {
-  font-size: 1.25rem; /* Adjust font size */
-  font-weight: bold; /* Bold title */
-}
-
-.card-body p {
-  color: #666; /* Subtle text color */
-}
-
-
-  </style>
-	<script>
-		window.addEventListener('scroll', function() {
-			var navbar = document.querySelector('.navbar');
-			var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-	
-			if (scrollPosition > 50) { // Adjust this value for when you want the navbar to change color
-				navbar.classList.add('scrolled');
-			} else {
-				navbar.classList.remove('scrolled');
-			}
-		});
-	</script>
-
-	
-	<body>
-	<!-- Section Menu Start -->
-	
-
-
-<!-- form -->
-
-<section class="h-70 bg-dark">
-    <div class="container py-5 h-70">
-      <div class="row d-flex justify-content-center align-items-center h-70">
-        <div class="col">
-          <div class="card card-registration my-4">
-            <div class="row g-0">
-              <div class="col-xl-6 d-none d-xl-block">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
-                  alt="Sample photo" class="img-fluid"
-                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
-              </div>
-              <div class="col-xl-6">
-                <div class="card-body p-md-5 text-black">
-                  <h3 class="mb-5 text-uppercase">Student registration form</h3>
-  
-                  <div class="row">
-                    <div class="col-md-6 mb-4">
-                      <div data-mdb-input-init class="form-outline">
-                        <input type="text" id="form3Example1m" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example1m">First name</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                      <div data-mdb-input-init class="form-outline">
-                        <input type="text" id="form3Example1n" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example1n">Last name</label>
-                      </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example1m">First name</label>
                     </div>
                   </div>
-  
-                  <div class="row">
-                    <div class="col-md-6 mb-4">
-                      <div data-mdb-input-init class="form-outline">
-                        <input type="text" id="form3Example1m1" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example1m1">Mother's name</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                      <div data-mdb-input-init class="form-outline">
-                        <input type="text" id="form3Example1n1" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example1n1">Father's name</label>
-                      </div>
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example1n">Last name</label>
                     </div>
                   </div>
-  
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="text" id="form3Example8" class="form-control form-control-lg" />
-                    <label class="form-label" for="form3Example8">Address</label>
-                  </div>
-  
-                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
-  
-                    <h6 class="mb-0 me-4">Gender: </h6>
-  
-                    <div class="form-check form-check-inline mb-0 me-4">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                        value="option1" />
-                      <label class="form-check-label" for="femaleGender">Female</label>
-                    </div>
-  
-                    <div class="form-check form-check-inline mb-0 me-4">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                        value="option2" />
-                      <label class="form-check-label" for="maleGender">Male</label>
-                    </div>
-  
-                    <div class="form-check form-check-inline mb-0">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
-                        value="option3" />
-                      <label class="form-check-label" for="otherGender">Other</label>
-                    </div>
-  
-                  </div>
-  
-                  <div class="row">
-                    <div class="col-md-6 mb-4">
-  
-                      <select data-mdb-select-init>
-                        <option value="1">State</option>
-                        <option value="2">Option 1</option>
-                        <option value="3">Option 2</option>
-                        <option value="4">Option 3</option>
-                      </select>
-  
-                    </div>
-                    <div class="col-md-6 mb-4">
-  
-                      <select data-mdb-select-init>
-                        <option value="1">City</option>
-                        <option value="2">Option 1</option>
-                        <option value="3">Option 2</option>
-                        <option value="4">Option 3</option>
-                      </select>
-  
-                    </div>
-                  </div>
-  
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="text" id="form3Example9" class="form-control form-control-lg" />
-                    <label class="form-label" for="form3Example9">DOB</label>
-                  </div>
-  
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="text" id="form3Example90" class="form-control form-control-lg" />
-                    <label class="form-label" for="form3Example90">Pincode</label>
-                  </div>
-  
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="text" id="form3Example99" class="form-control form-control-lg" />
-                    <label class="form-label" for="form3Example99">Course</label>
-                  </div>
-  
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="text" id="form3Example97" class="form-control form-control-lg" />
-                    <label class="form-label" for="form3Example97">Email ID</label>
-                  </div>
-  
-                  <div class="d-flex justify-content-end pt-3">
-                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg">Reset all</button>
-                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2">Submit form</button>
-                  </div>
-  
                 </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example1m1" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example1m1">Mother's name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example1n1" class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example1n1">Father's name</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example8" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example8">Address</label>
+                </div>
+
+                <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                  <h6 class="mb-0 me-4">Gender: </h6>
+
+                  <div class="form-check form-check-inline mb-0 me-4">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                      value="option1" />
+                    <label class="form-check-label" for="femaleGender">Female</label>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-0 me-4">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                      value="option2" />
+                    <label class="form-check-label" for="maleGender">Male</label>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-0">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                      value="option3" />
+                    <label class="form-check-label" for="otherGender">Other</label>
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+
+                    <select data-mdb-select-init>
+                      <option value="1">State</option>
+                      <option value="2">Option 1</option>
+                      <option value="3">Option 2</option>
+                      <option value="4">Option 3</option>
+                    </select>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+
+                    <select data-mdb-select-init>
+                      <option value="1">City</option>
+                      <option value="2">Option 1</option>
+                      <option value="3">Option 2</option>
+                      <option value="4">Option 3</option>
+                    </select>
+
+                  </div>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example9" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example9">DOB</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example90" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example90">Pincode</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example99" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example99">Course</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example97" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example97">Email ID</label>
+                </div>
+
+                <div class="d-flex justify-content-end pt-3">
+                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg">Reset all</button>
+                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2">Submit form</button>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section> 
+  </div>
+</section>
+<script src="plugins/jquery/jquery.js"></script>
+   <!-- Bootstrap 4.3.1 -->
+   <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+   <!-- Slick Slider -->
+   <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+   <!--  Magnific Popup-->
+   <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+   <!-- Form Validator -->
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+   <!-- Google Map -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+   <script src="plugins/google-map/gmap.js"></script>
+
+   <script src="js/script.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- jQuery Validate Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+<!-- Your custom script -->
+<script src="path/to/your/script.js"></script>
+
 </body>
-
 </html>
-
-
