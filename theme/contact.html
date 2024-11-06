@@ -106,6 +106,32 @@
       transform: translateX(-100%);
   }
 }
+.whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 1000;
+      transition: transform 0.3s ease; /* Smooth zoom effect */
+    }
+
+    .whatsapp-float i {
+      margin-top: 15px;
+    }
+
+    /* Zoom-in effect on hover */
+    .whatsapp-float:hover {
+      background-color: #1EBE5B;
+      cursor: pointer;
+      transform: scale(1.1); /* Zoom in */
+    }
 </style>
 <script>
 	window.addEventListener('scroll', function() {
@@ -368,6 +394,14 @@
         </div>
       </div>
     </footer>
+    <a href="https://wa.me/7740913163" target="_blank" class="whatsapp-float">
+      <i class="fab fa-whatsapp"></i>
+      </a>
+      
+      <!-- Font Awesome Icon Library -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      
+       </div>
     <!-- Footer End -->
 
   </div>
