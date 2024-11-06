@@ -255,8 +255,7 @@
 }
 
 
- /* Floating WhatsApp Button */
- .whatsapp-float {
+.whatsapp-float {
       position: fixed;
       width: 60px;
       height: 60px;
@@ -269,16 +268,18 @@
       font-size: 30px;
       box-shadow: 2px 2px 3px #999;
       z-index: 1000;
+      transition: transform 0.3s ease; /* Smooth zoom effect */
     }
 
     .whatsapp-float i {
       margin-top: 15px;
     }
 
-    /* WhatsApp Icon Link Styling */
+    /* Zoom-in effect on hover */
     .whatsapp-float:hover {
       background-color: #1EBE5B;
       cursor: pointer;
+      transform: scale(1.1); /* Zoom in */
     }
 
   </style>
@@ -862,7 +863,7 @@
 	</div>
 </footer>
 <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="whatsapp-float">
-	<i class="fa fa-whatsapp"></i>
+	<i class="fab fa-whatsapp"></i>
   </a>
   
   <!-- Font Awesome Icon Library -->
