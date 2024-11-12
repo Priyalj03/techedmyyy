@@ -127,7 +127,8 @@
       font-size: 30px;
       box-shadow: 2px 2px 3px #999;
       z-index: 1000;
-      transition: transform 0.3s ease; /* Smooth zoom effect */
+      animation: pop 1.5s ease-in-out infinite; /* Popping effect */
+      transition: transform 0.3s ease;
     }
 
     .whatsapp-float i {
@@ -139,6 +140,16 @@
       background-color: #1EBE5B;
       cursor: pointer;
       transform: scale(1.1); /* Zoom in */
+    }
+
+    /* Keyframes for popping effect */
+    @keyframes pop {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2); /* Scale up to 1.2x at midpoint */
+      }
     }
 </style>
 <script>
@@ -361,6 +372,8 @@
         </div>
     </div>
 </section>
+
+
 
 
 
